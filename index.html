@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Daily AI + PM Digest</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", system-ui, sans-serif;
+    background: #fafaf7;
+    color: #1a1a1a;
+    line-height: 1.6;
+    padding: 36px 28px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  header {
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #1a1a1a;
+  }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 11px;
+    font-weight: 700;
+    color: #c8102e;
+    margin-bottom: 8px;
+  }
+  h1 {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+  .date {
+    color: #767672;
+    font-size: 14px;
+    margin-top: 6px;
+    font-weight: 500;
+  }
+  .tagline {
+    color: #4a4a47;
+    font-size: 14px;
+    margin-top: 12px;
+    line-height: 1.5;
+  }
+  .badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+  }
+  .trust-badge, .legend-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+  }
+  .trust-badge {
+    background: #ecfaef;
+    color: #1f6a3f;
+    border-color: #c9ebd2;
+  }
+  .trust-badge::before { content: "✓"; font-weight: 700; }
+  .legend-badge {
+    background: #fff4d6;
+    color: #8a5a00;
+    border-color: #ffd97a;
+  }
+  .legend-badge::before { content: "★"; font-weight: 700; }
+  section { margin-bottom: 40px; }
+  h2 {
+    font-size: 13px;
+    font-weight: 800;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e5e5e0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h2::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 16px;
+    background: #c8102e;
+    border-radius: 1px;
+  }
+  .item {
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0eb;
+    position: relative;
+  }
+  .item:last-child { border-bottom: none; }
+  .item.must-read {
+    background: linear-gradient(to right, #fffaeb 0%, #fffaeb 60%, #fafaf7 100%);
+    padding: 20px 16px;
+    margin: 8px -16px 0;
+    border-radius: 6px;
+    border-left: 4px solid #d4a017;
+    border-bottom: none;
+  }
+  .item.must-read + .item:not(.must-read) {
+    border-top: 1px solid #f0f0eb;
+  }
+  .must-read-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #d4a017;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+  }
+  .must-read-tag::before { content: "★"; }
+  .item-title {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    line-height: 1.35;
+  }
+  .item-title a {
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+  .item-title a:hover {
+    color: #c8102e;
+  }
+  .item.must-read .item-title a:hover {
+    color: #8a5a00;
+  }
+  .item-meta {
+    color: #999;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+  }
+  .item-takeaway-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #c8102e;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+  }
+  .item.must-read .item-takeaway-label {
+    color: #8a5a00;
+  }
+  .item-takeaway {
+    font-size: 14.5px;
+    color: #2a2a27;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+  .item-link a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #c8102e;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+  .item-link a:hover {
+    border-bottom-color: #c8102e;
+  }
+  .item.must-read .item-link a {
+    color: #8a5a00;
+  }
+  .item.must-read .item-link a:hover {
+    border-bottom-color: #8a5a00;
+  }
+  footer {
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    padding-top: 28px;
+    border-top: 1px solid #e5e5e0;
+    margin-top: 40px;
+    line-height: 1.7;
+  }
+  footer .hint { color: #555; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="eyebrow">Caroline's Daily Brief</div>
+    <h1>AI + PM Digest</h1>
+    <div class="date" id="today"></div>
+    <div class="tagline">Key takeaways from frontier AI, product thinking, and the workflows top PMs are actually running. Curated for staying current and sharpening interview narratives.</div>
+    <div class="badges">
+      <div class="trust-badge">Trusted sources · 2026 · last 90 days</div>
+      <div class="legend-badge">Must-reads flagged</div>
+    </div>
+  </header>
+
+  <section>
+    <h2>AI Model &amp; Product Releases</h2>
+
+    <div class="item">
+      <div class="item-title">
+        <a href="https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-collection/" target="_blank" rel="noopener">Google I/O 2026: Gemini Omni and Gemini 3.5 Flash</a>
+      </div>
+      <div class="item-meta">Google Blog · May 19, 2026</div>
+      <div class="item-takeaway-label">Key takeaway</div>
+      <div class="item-takeaway">Google shipped two big primitives at I/O: Gemini Omni, which can create anything from any input starting with video, and Gemini 3.5 Flash, the first in their newest family that combines frontier intelligence with action-taking. The pattern across both is "model + ability to act," not just better answers. In interviews, the sharper take is that frontier labs are converging on agentic capability as the new axis of competition — pure model quality is becoming table stakes.</div>
+      <div class="item-link"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-collection/" target="_blank" rel="noopener">Read the full piece →</a></div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">
+        <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank" rel="noopener">OpenAI introduces GPT-5.5 and GPT-Rosalind (for drug discovery)</a>
+      </div>
+      <div class="item-meta">OpenAI · April 23, 2026</div>
+      <div class="item-takeaway-label">Key takeaway</div>
+      <div class="item-takeaway">GPT-5.5 is OpenAI's smartest model yet, faster and more capable for coding, research, and data analysis — pitched explicitly at agentic coding, knowledge work, and research workflows. Alongside it, GPT-Rosalind is a frontier reasoning model purpose-built for drug discovery, genomics, and protein reasoning. The interview signal here is the rise of vertical reasoning models: PMs at applied-AI startups should be thinking about "what's the GPT-Rosalind for our domain?" rather than which general model to pick.</div>
+      <div class="item-link"><a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank" rel="noopener">Read the full piece →</a></div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">
+        <a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-april-2026/" target="_blank" rel="noopener">Google's April: Gemini Enterprise Agent Platform, Gemma 4, eighth-gen TPUs</a>
+      </div>
+      <div class="item-meta">Google Blog · April 2026</div>
+      <div class="item-takeaway-label">Key takeaway</div>
+      <div class="item-takeaway">At Cloud Next, Google introduced the Gemini Enterprise Agent Platform, released Gemma 4 (billed as the most capable open model byte-for-byte), Deep Research Max for heavy data analysis, and eighth-generation TPUs designed for the agentic era. The thread connecting all four is enterprise agent infrastructure — the same pattern as Antigravity 2.0 in May. Knowing the agent-platform landscape (Google's Enterprise platform, Microsoft Copilot Studio, OpenAI Agent Builder) is the differentiator at startup PM interviews where you need a POV on build vs. buy.</div>
+      <div class="item-link"><a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-april-2026/" target="_blank" rel="noopener">Read the full piece →</a></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>PM Thought Leaders</h2>
+
+    <div class="item must-read">
+      <div class="must-read-tag">Must read</div>
+      <div class="item-title">
+        <a href="https://www.reforge.com/blog/pm-managers-vs-super-ics-in-the-age-of-ai-navigating-the-evolving-role-of-product-managers" target="_blank" rel="noopener">Reforge: PM Managers vs. Super ICs in the age of AI</a>
+      </div>
+      <div class="item-meta">Reforge · 2026</div>
+      <div class="item-takeaway-label">Key takeaway</div>
+      <div class="item-takeaway">The piece argues AI isn't shrinking the PM function — it's bifurcating it. As low-value PM work gets automated, two distinct shapes emerge: PM Managers who orchestrate teams and strategy, and Super ICs who use AI leverage to deliver what used to require a small team. For your interviews, you can position yourself credibly as the Super IC archetype: a senior PM whose AI workflows mean you ship the output of 2-3 PMs without expanding headcount.</div>
+      <div class="item-link"><a href="https://www.reforge.com/blog/pm-managers-vs-super-ics-in-the-age-of-ai-navigating-the-evolving-role-of-product-managers" target="_blank" rel="noopener">Read the full piece →</a></div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">
+        <a href="https://www.mindtheproduct.com/the-2026-ai-product-strategy-huide-how-to-plan-budget-and-build-without-buying-into-the-hype/" target="_blank" rel="noopener">Mind the Product: The 2026 AI product strategy guide</a>
+      </div>
+      <div class="item-meta">Mind the Product · 2026</div>
+      <div class="item-takeaway-label">Key takeaway</div>
+      <div class="item-takeaway">The key question for Heads of Product going into 2026 isn't "is AI real?" — it's how to plan, budget, and ship without buying into hype. The piece argues for pulling AI out of generic R&amp;D and treating it as its own P&amp;L line, because AI features lift revenue and engagement but compress gross margins through model and infrastructure costs. The interview-ready POV: AI success metrics need to be tied to real work (time-to-onboard, support-ticket reduction), not vanity signals like "% of users who clicked the AI button."</div>
+      <div class="item-link"><a href="https://www.mindtheproduct.com/the-2026-ai-product-strategy-huide-how-to-plan-budget-and-build-without-buying-into-the-hype/" target="_blank" rel="noopener">Read the full piece →</a></div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">
+        <a href="https://www.lennysnewsletter.com/p/how-close-is-ai-to-replacing-product" target="_blank" rel="noopener">Lenny Rachitsky: how close is AI to replacing product managers?</a>
+      </div>
+      <div class="item-meta">Lenny's Newsletter · 2026</div>
+      <div class="item-takeaway-label">Key takeaway</div>
+      <div class="item-takeaway">Lenny's take: the technological shift isn't eliminating the PM role — it's elevating what has always separated exceptional PMs from average ones. AI tools clear out low-value execution work, which makes strategic vision and deep problem understanding more valuable, not less. The interview application: when asked "how does AI change your role?" your answer should be "it raises the floor on what I can ship and forces me to spend more time on strategy I'd have outsourced to process before."</div>
+      <div class="item-link"><a href="https://www.lennysnewsletter.com/p/how-close-is-ai-to-replacing-product" target="_blank" rel="noopener">Read the full piece →</a></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Applied AI Workflows for PMs</h2>
+
+    <div class="item must-read">
+      <div class="must-read-tag">Must read</div>
+      <div class="item-title">
+        <a href="https://www.lennysnewsletter.com/p/make-product-management-fun-again" target="_blank" rel="noopener">Lenny: make product management fun again with AI agents</a>
+      </div>
+      <div class="item-meta">Lenny's Newsletter · 2026</div>
+      <div class="item-takeaway-label">Key takeaway</div>
+      <div class="item-takeaway">Two concrete agent workflows worth building this week: a product feedback routing agent that pulls from Slack, support, and public channels, prioritizes signal, and converts it to weekly product action; and a weekly metrics reporting agent that auto-pulls Friday data, generates charts, drafts the narrative, and ships the report. Pick one and build it on Rokt this week — "I have a feedback agent that runs every Sunday night and lands a triaged backlog in my inbox Monday morning" is the kind of specific story that wins senior PM loops.</div>
+      <div class="item-link"><a href="https://www.lennysnewsletter.com/p/make-product-management-fun-again" target="_blank" rel="noopener">Read the full piece →</a></div>
+    </div>
+
+    <div class="item must-read">
+      <div class="must-read-tag">Must read</div>
+      <div class="item-title">
+        <a href="https://every.to/guides/ai-product-management-guide" target="_blank" rel="noopener">Every: Agent-native Product Management</a>
+      </div>
+      <div class="item-meta">Every · 2026</div>
+      <div class="item-takeaway-label">Key takeaway</div>
+      <div class="item-takeaway">Every's framing is that agents designed for PMs act proactively rather than waiting to be prompted, make their own plans rather than following step-by-step instructions, and pull context from an internal knowledge base plus live data. The behavioral shift is set-and-verify, not prompt-and-paste. In an interview, naming this distinction — "I run agents in a set-and-verify pattern" — instantly puts you in the top tier because it shows you've internalized how 2026 PM work actually changes, not just which tools you use.</div>
+      <div class="item-link"><a href="https://every.to/guides/ai-product-management-guide" target="_blank" rel="noopener">Read the full piece →</a></div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">
+        <a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/" target="_blank" rel="noopener">OpenAI: a practical guide to building agents</a>
+      </div>
+      <div class="item-meta">OpenAI · 2026</div>
+      <div class="item-takeaway-label">Key takeaway</div>
+      <div class="item-takeaway">OpenAI's design principle is "give yourself all the upside and cap the downside" — rather than predicting how often a model will get it right, design agents so failures are bounded. They argue strongly for starting with single-agent loops (one model + tools + clear instructions) and only adding complexity once the simple version is working. The interview application: when asked how you'd ship AI features at the new role, lead with the bounded-blast-radius mental model — it's a much more senior-sounding answer than "we'd run evals."</div>
+      <div class="item-link"><a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/" target="_blank" rel="noopener">Read the full piece →</a></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="hint">Refreshes automatically every morning at 7:30 AM from a trusted-source allowlist (2026 only · last 90 days). Use the Reload button to refetch on demand.</div>
+    <div style="margin-top: 6px;">Curated by Claude · 9 stories · 3 must-reads · ~10 min read</div>
+  </footer>
+
+<script>
+  const today = new Date();
+  document.getElementById('today').textContent = today.toLocaleDateString('en-US', {
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+  });
+</script>
+</body>
+</html>

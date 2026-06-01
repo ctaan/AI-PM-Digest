@@ -2,13 +2,13 @@
 {
   "name": "AI+PM Digest — June 1, 2026",
   "schemaVersion": 1,
-  "description": "Caroline's daily AI + PM digest — covers AI model releases, PM thought leaders, and applied AI workflows. Refreshed daily at 7:30 AM by a scheduled task."
+  "description": "Caroline's daily AI + PM digest with weekly Competitive Pulse tab — covers AI model releases, PM thought leaders, applied AI workflows, and Rokt's competitive landscape."
 }
 </script>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Daily AI + PM Digest</title>
+<title>Caroline's Daily Brief</title>
 <style>
   :root { color-scheme: light; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -22,7 +22,7 @@
     margin: 0 auto;
   }
   header {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     padding-bottom: 20px;
     border-bottom: 2px solid #1a1a1a;
   }
@@ -73,13 +73,57 @@
     color: #1f6a3f;
     border-color: #c9ebd2;
   }
-  .trust-badge::before { content: "✓"; font-weight: 700; }
+  .trust-badge::before { content: "\2713"; font-weight: 700; }
   .legend-badge {
     background: #fff4d6;
     color: #8a5a00;
     border-color: #ffd97a;
   }
-  .legend-badge::before { content: "★"; font-weight: 700; }
+  .legend-badge::before { content: "\2605"; font-weight: 700; }
+
+  /* Tab bar */
+  .tabs {
+    display: flex;
+    gap: 4px;
+    border-bottom: 1px solid #e5e5e0;
+    margin-bottom: 28px;
+    margin-top: 4px;
+  }
+  .tab {
+    padding: 12px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #767672;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -1px;
+    letter-spacing: 0.03em;
+    transition: color 0.15s, border-color 0.15s;
+    font-family: inherit;
+  }
+  .tab:hover {
+    color: #1a1a1a;
+  }
+  .tab.active {
+    color: #c8102e;
+    border-bottom-color: #c8102e;
+  }
+  .tab .tab-meta {
+    font-size: 10px;
+    font-weight: 600;
+    color: #999;
+    margin-left: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .tab.active .tab-meta {
+    color: #c8102e;
+  }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
   section { margin-bottom: 40px; }
   h2 {
     font-size: 13px;
@@ -101,6 +145,16 @@
     height: 16px;
     background: #c8102e;
     border-radius: 1px;
+  }
+  .panel-intro {
+    color: #4a4a47;
+    font-size: 13px;
+    margin-bottom: 24px;
+    line-height: 1.55;
+    padding: 12px 14px;
+    background: #f3f3ee;
+    border-left: 3px solid #c8102e;
+    border-radius: 0 4px 4px 0;
   }
   .item {
     padding: 20px 0;
@@ -133,7 +187,32 @@
     border-radius: 3px;
     margin-bottom: 8px;
   }
-  .must-read-tag::before { content: "★"; }
+  .must-read-tag::before { content: "\2605"; }
+  .company-tag {
+    display: inline-block;
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    margin-right: 6px;
+  }
+  .signal-tag {
+    display: inline-block;
+    background: #e5e5e0;
+    color: #4a4a47;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+  }
   .item-title {
     font-size: 17px;
     font-weight: 700;
@@ -207,129 +286,287 @@
 <body>
   <header>
     <div class="eyebrow">Caroline's Daily Brief</div>
-    <h1>AI + PM Digest</h1>
+    <h1>AI + PM &middot; Competitive Pulse</h1>
     <div class="date" id="today"></div>
-    <div class="tagline">How to stay current on PM AI development and grow your PM career. Today's frontier moves in AI, product thinking, and the workflows top PMs are actually running.</div>
-    <div class="badges">
-      <div class="trust-badge">Trusted sources · 2026 · last 90 days</div>
-      <div class="legend-badge">Must-reads flagged</div>
-    </div>
   </header>
 
-  <section>
-    <h2>AI Model &amp; Product Releases</h2>
+  <div class="tabs" role="tablist">
+    <button class="tab active" role="tab" data-tab="ai-pm">AI + PM<span class="tab-meta">daily</span></button>
+    <button class="tab" role="tab" data-tab="competitive">Competitive Pulse<span class="tab-meta">weekly</span></button>
+  </div>
 
-    <div class="item">
-      <div class="item-title">
-        <a href="https://www.anthropic.com/news/claude-opus-4-8" target="_blank" rel="noopener">Introducing Claude Opus 4.8</a>
-      </div>
-      <div class="item-meta">Anthropic · May 28, 2026</div>
-      <div class="item-takeaway-label">Key takeaway</div>
-      <div class="item-takeaway">Opus 4.8 benchmarks up across the board, but the more interesting shipped features are an effort-level control on claude.ai (users dial how hard Claude works on a task) and a new Claude Code "dynamic workflows" mode for very large-scale problems — with fast-mode pricing now 3x cheaper than prior Opus generations. The mental model shift for PMs: model upgrades now ship with explicit effort/cost knobs, so AI feature pricing and UX increasingly hinge on how you expose those knobs to users. Apply this principle to any AI roadmap item — design the effort dial into the product, don't bury it.</div>
-      <div class="item-link"><a href="https://www.anthropic.com/news/claude-opus-4-8" target="_blank" rel="noopener">Read the full piece →</a></div>
+  <!-- ============== AI + PM TAB ============== -->
+  <div class="tab-panel active" id="panel-ai-pm" role="tabpanel">
+    <div class="panel-intro">How to stay current on PM AI development and grow your PM career. Today's frontier moves in AI, product thinking, and the workflows top PMs are actually running. Refreshes daily at 7:30 AM.</div>
+    <div class="badges" style="margin-bottom: 24px;">
+      <div class="trust-badge">Trusted sources &middot; 2026 &middot; last 90 days</div>
+      <div class="legend-badge">Must-reads flagged</div>
     </div>
 
-    <div class="item">
-      <div class="item-title">
-        <a href="https://www.anthropic.com/news/series-h" target="_blank" rel="noopener">Anthropic raises $65B Series H at $965B post-money</a>
+    <section>
+      <h2>AI Model &amp; Product Releases</h2>
+
+      <div class="item">
+        <div class="item-title">
+          <a href="https://www.anthropic.com/news/claude-opus-4-8" target="_blank" rel="noopener">Introducing Claude Opus 4.8</a>
+        </div>
+        <div class="item-meta">Anthropic &middot; May 28, 2026</div>
+        <div class="item-takeaway-label">Key takeaway</div>
+        <div class="item-takeaway">Opus 4.8 benchmarks up across the board, but the more interesting shipped features are an effort-level control on claude.ai (users dial how hard Claude works on a task) and a new Claude Code "dynamic workflows" mode for very large-scale problems &mdash; with fast-mode pricing now 3x cheaper than prior Opus generations. The mental model shift for PMs: model upgrades now ship with explicit effort/cost knobs, so AI feature pricing and UX increasingly hinge on how you expose those knobs to users. Apply this principle to any AI roadmap item &mdash; design the effort dial into the product, don't bury it.</div>
+        <div class="item-link"><a href="https://www.anthropic.com/news/claude-opus-4-8" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
-      <div class="item-meta">Anthropic · May 28, 2026</div>
-      <div class="item-takeaway-label">Key takeaway</div>
-      <div class="item-takeaway">Anthropic's Series H from Altimeter, Dragoneer, Greenoaks, and Sequoia values the company at nearly $1T post-money, with run-rate revenue crossing $47B earlier in May — a quadrupling since the Series G in February. The framing PMs should adopt: enterprise AI revenue is no longer a future story, it's a present run-rate, and the labs are now resourced to ship vertical, deeply-integrated products faster than any partner can. For any PM building on Claude or OpenAI, internalize that the model layer is racing into your product surface — plan the integration moat, not the wrapper moat.</div>
-      <div class="item-link"><a href="https://www.anthropic.com/news/series-h" target="_blank" rel="noopener">Read the full piece →</a></div>
+
+      <div class="item">
+        <div class="item-title">
+          <a href="https://www.anthropic.com/news/series-h" target="_blank" rel="noopener">Anthropic raises $65B Series H at $965B post-money</a>
+        </div>
+        <div class="item-meta">Anthropic &middot; May 28, 2026</div>
+        <div class="item-takeaway-label">Key takeaway</div>
+        <div class="item-takeaway">Anthropic's Series H from Altimeter, Dragoneer, Greenoaks, and Sequoia values the company at nearly $1T post-money, with run-rate revenue crossing $47B earlier in May &mdash; a quadrupling since the Series G in February. The framing PMs should adopt: enterprise AI revenue is no longer a future story, it's a present run-rate, and the labs are now resourced to ship vertical, deeply-integrated products faster than any partner can. For any PM building on Claude or OpenAI, internalize that the model layer is racing into your product surface &mdash; plan the integration moat, not the wrapper moat.</div>
+        <div class="item-link"><a href="https://www.anthropic.com/news/series-h" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <a href="https://techcrunch.com/2026/05/19/google-introduces-gemini-spark-a-24-7-agentic-assistant-with-gmail-integration/" target="_blank" rel="noopener">Google introduces Gemini Spark, a 24/7 agentic assistant with Gmail integration</a>
+        </div>
+        <div class="item-meta">TechCrunch &middot; May 19, 2026</div>
+        <div class="item-takeaway-label">Key takeaway</div>
+        <div class="item-takeaway">At I/O 2026, Google unveiled Gemini Spark &mdash; an always-on agentic assistant built on Gemini base models plus Google's Antigravity agent harness, with deep Gmail and Workspace integration, alongside Gemini 3.5 Flash and the Omni multimodal family. The signal for PMs: the three frontier labs are converging on "persistent, scoped, always-on agent" as the default product surface, not chat. For any PM whose product still treats AI as a chat box, this is the shape to copy &mdash; define what the agent watches, what it can do unattended, and how it reports back.</div>
+        <div class="item-link"><a href="https://techcrunch.com/2026/05/19/google-introduces-gemini-spark-a-24-7-agentic-assistant-with-gmail-integration/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>PM Thought Leaders</h2>
+
+      <div class="item must-read">
+        <div class="must-read-tag">Must read</div>
+        <div class="item-title">
+          <a href="https://www.lennysnewsletter.com/p/why-cultivating-agency-matters-more" target="_blank" rel="noopener">Why cultivating agency matters more than cultivating skills in the AI era | Max Schoening (Notion)</a>
+        </div>
+        <div class="item-meta">Lenny's Newsletter &middot; May 3, 2026</div>
+        <div class="item-takeaway-label">Key takeaway</div>
+        <div class="item-takeaway">Notion's Head of Product argues that the first 10% of every project is now effectively free with AI, which collapses the cost of starting &mdash; so agency (the willingness to start, pursue, and own the messy middle) becomes the dominant differentiator, not skill accumulation. Internalize this and the career investment becomes obvious: stop optimizing for which AI tool to learn next, start optimizing for how many self-initiated bets you ship this quarter. The framing PMs should adopt is "I run experiments without being asked" &mdash; that's the muscle AI just made 10x more valuable.</div>
+        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/why-cultivating-agency-matters-more" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+      </div>
+
+      <div class="item must-read">
+        <div class="must-read-tag">Must read</div>
+        <div class="item-title">
+          <a href="https://www.lennysnewsletter.com/p/why-half-of-product-managers-are-in-trouble" target="_blank" rel="noopener">Why half of product managers are in trouble | Nikhyl Singhal (Meta, Google)</a>
+        </div>
+        <div class="item-meta">Lenny's Newsletter &middot; April 19, 2026</div>
+        <div class="item-takeaway-label">Key takeaway</div>
+        <div class="item-takeaway">Nikhyl Singhal &mdash; ex-Meta/Google product exec, founder of The Skip &mdash; argues the next two years will be the most chaotic period in PM history, and the PMs who survive will be the ones who move from process-runner to high-leverage decision-maker. The career implication for senior PMs: AI is compressing the value of "PM as project coordinator" to near-zero, while bidding up "PM with sharp judgment on what to build and why." Apply this principle by auditing your week &mdash; what fraction was status-tracking, scoping, and meeting orchestration vs. genuine product judgment? Get that ratio above 50% or expect the role to harden against you.</div>
+        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/why-half-of-product-managers-are-in-trouble" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <a href="https://stratechery.com/2026/agents-over-bubbles/" target="_blank" rel="noopener">Agents Over Bubbles | Ben Thompson</a>
+        </div>
+        <div class="item-meta">Stratechery &middot; March 26, 2026</div>
+        <div class="item-takeaway-label">Key takeaway</div>
+        <div class="item-takeaway">Thompson &mdash; writing the morning of Nvidia's GTC &mdash; recants the AI bubble thesis based on three observations: LLM weaknesses are being addressed by raw compute, the number of humans who need to wield AI well to drive demand is decreasing because agents do it for them, and agentic returns hit the top line, not just the cost line. The framing PMs should adopt: stop sizing AI features by current human user counts and start sizing them by agents-per-user &mdash; your TAM math is wrong if every user is going to run multiple agents against your product. Internalize this for any AI roadmap planning.</div>
+        <div class="item-link"><a href="https://stratechery.com/2026/agents-over-bubbles/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Applied AI Workflows for PMs</h2>
+
+      <div class="item">
+        <div class="item-title">
+          <a href="https://every.to/on-every/introducing-proof" target="_blank" rel="noopener">Introducing Proof: a document editor built for agents</a>
+        </div>
+        <div class="item-meta">Every &middot; May 24, 2026</div>
+        <div class="item-takeaway-label">Key takeaway</div>
+        <div class="item-takeaway">Every launched Proof, a free open-source document editor designed for the documents agents are increasingly writing &mdash; PRDs, bug reports, implementation plans, research briefs, strategy memos &mdash; with a colored rail tracking who wrote what (green for human, purple for AI) and full live multi-collaborator edits. Apply this to your own PM workflow this week: stop pasting AI drafts into Google Docs as if they were human-authored and start using a tool that makes the human/AI authorship boundary explicit. The mental model shift is treating provenance as a first-class document property &mdash; it changes how reviewers calibrate trust.</div>
+        <div class="item-link"><a href="https://every.to/on-every/introducing-proof" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <a href="https://simonwillison.net/2026/May/21/datasette-agent/" target="_blank" rel="noopener">Datasette Agent: a conversational AI assistant for your data</a>
+        </div>
+        <div class="item-meta">Simon Willison &middot; May 21, 2026</div>
+        <div class="item-takeaway-label">Key takeaway</div>
+        <div class="item-takeaway">Willison shipped Datasette Agent, an extensible AI assistant that lets you ask questions of any data stored in Datasette and (with the charts plugin) generate visualizations on the fly. The principle to apply: every PM should have a "ask my data anything" surface over their product analytics &mdash; not a BI dashboard, a conversational agent with read access to the warehouse. Build this for yourself before your analytics team builds it for the whole org, because PMs who can interrogate data without filing a ticket compress every product decision loop. Treat this as a personal workflow you should own this quarter.</div>
+        <div class="item-link"><a href="https://simonwillison.net/2026/May/21/datasette-agent/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+      </div>
+
+      <div class="item must-read">
+        <div class="must-read-tag">Must read</div>
+        <div class="item-title">
+          <a href="https://www.lennysnewsletter.com/p/not-all-ai-agents-are-created-equal" target="_blank" rel="noopener">Not all AI agents are created equal</a>
+        </div>
+        <div class="item-meta">Lenny's Newsletter &middot; April 14, 2026</div>
+        <div class="item-takeaway-label">Key takeaway</div>
+        <div class="item-takeaway">The piece argues that the agent boom is producing wildly different categories of "agent" &mdash; from prompt-wrapped chatbots to genuinely autonomous multi-step systems &mdash; and most PM agent backlogs conflate them, leading to over- or under-investment. The framework PMs should adopt before writing a single agent PRD: classify the agent by autonomy level (assisted, supervised, autonomous), surface (chat, sidebar, background), and trust profile (read-only, write-with-confirmation, fully empowered) &mdash; then size investment to category, not to "agent" as a monolith. Apply this principle this week to triage your team's agent ideas honestly.</div>
+        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/not-all-ai-agents-are-created-equal" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============== COMPETITIVE PULSE TAB ============== -->
+  <div class="tab-panel" id="panel-competitive" role="tabpanel">
+    <div class="panel-intro">What competitors and adjacent players in the Transaction Moment are shipping, saying, and being said about. Filtered for moves that matter to Rokt Thanks &amp; Ads strategy &mdash; relevance engines, identity, agentic orchestration, and retail/commerce media. Refreshes every Monday morning.</div>
+    <div class="badges" style="margin-bottom: 24px;">
+      <div class="trust-badge">Trusted ad-tech press &middot; 2026</div>
+      <div class="legend-badge">Strategic must-reads flagged</div>
     </div>
 
-    <div class="item">
-      <div class="item-title">
-        <a href="https://techcrunch.com/2026/05/19/google-introduces-gemini-spark-a-24-7-agentic-assistant-with-gmail-integration/" target="_blank" rel="noopener">Google introduces Gemini Spark, a 24/7 agentic assistant with Gmail integration</a>
+    <section>
+      <h2>Product &amp; Feature Announcements</h2>
+
+      <div class="item must-read">
+        <div class="must-read-tag">Must read</div>
+        <span class="company-tag">Wunderkind</span><span class="signal-tag">Product</span>
+        <div class="item-title">
+          <a href="https://www.adweek.com/adweek-wire/wunderkind-announces-autonomous-marketing-platform-to-help-marketers-harness-power-of-ai/" target="_blank" rel="noopener">Wunderkind announces Autonomous Marketing Platform with Studio app</a>
+        </div>
+        <div class="item-meta">AdWeek &middot; 2026</div>
+        <div class="item-takeaway-label">Why this matters for Rokt Thanks &amp; Ads</div>
+        <div class="item-takeaway">Wunderkind is positioning its proprietary identity graph (9B+ devices, 2T+ digital events) as "the eyes" and its AI as "the brain" &mdash; nearly identical framing to the Rokt Brain + 1st-party data flywheel, but anchored on resolving anonymous web traffic rather than the Transaction Moment. The strategic read: Wunderkind is the closest narrative competitor to Rokt's relevance pitch, but they're upstream (anonymous visitor &rarr; known) where Rokt is downstream (high-intent transaction &rarr; relevant offer). Watch for them to push into post-purchase &mdash; if Wunderkind layers Thanks-style placements onto their identity graph, the moat compresses fast. The defensible Rokt narrative remains the Transaction Moment as a distinct, perishable surface that requires curation, not retargeting.</div>
+        <div class="item-link"><a href="https://www.adweek.com/adweek-wire/wunderkind-announces-autonomous-marketing-platform-to-help-marketers-harness-power-of-ai/" target="_blank" rel="noopener">Read on AdWeek &rarr;</a></div>
       </div>
-      <div class="item-meta">TechCrunch · May 19, 2026</div>
-      <div class="item-takeaway-label">Key takeaway</div>
-      <div class="item-takeaway">At I/O 2026, Google unveiled Gemini Spark — an always-on agentic assistant built on Gemini base models plus Google's Antigravity agent harness, with deep Gmail and Workspace integration, alongside Gemini 3.5 Flash and the Omni multimodal family. The signal for PMs: the three frontier labs are converging on "persistent, scoped, always-on agent" as the default product surface, not chat. For any PM whose product still treats AI as a chat box, this is the shape to copy — define what the agent watches, what it can do unattended, and how it reports back.</div>
-      <div class="item-link"><a href="https://techcrunch.com/2026/05/19/google-introduces-gemini-spark-a-24-7-agentic-assistant-with-gmail-integration/" target="_blank" rel="noopener">Read the full piece →</a></div>
-    </div>
-  </section>
 
-  <section>
-    <h2>PM Thought Leaders</h2>
-
-    <div class="item must-read">
-      <div class="must-read-tag">Must read</div>
-      <div class="item-title">
-        <a href="https://www.lennysnewsletter.com/p/why-cultivating-agency-matters-more" target="_blank" rel="noopener">Why cultivating agency matters more than cultivating skills in the AI era | Max Schoening (Notion)</a>
+      <div class="item must-read">
+        <div class="must-read-tag">Must read</div>
+        <span class="company-tag">Attentive</span><span class="signal-tag">Product</span>
+        <div class="item-title">
+          <a href="https://www.attentive.com/press-releases/attentive-unveils-next-generation-of-agentic-ai-marketing-innovation-at-thread-2026" target="_blank" rel="noopener">Attentive unveils Brand Voice 2.0, Reporting Agent, Predictive Analytics &amp; AI Campaigns at Thread 2026</a>
+        </div>
+        <div class="item-meta">Attentive press &middot; Thread 2026 (pre-BFCM rollout)</div>
+        <div class="item-takeaway-label">Why this matters for Rokt Thanks &amp; Ads</div>
+        <div class="item-takeaway">Attentive is going hard on agentic orchestration &mdash; AI Campaigns auto-builds push messaging end-to-end, AI Journeys/AI Grow already power nearly half their customer base, and $6B in Q1 2026 brand-attributed revenue gives them the case studies to credibly claim "AI orchestrates everything across SMS, email, push." The strategic implication for Rokt Thanks: Attentive's relevance pitch is "right message, right channel, right moment" &mdash; very close to Rokt's "right offer in the Transaction Moment" framing, but for owned channels. Where Rokt wins: Attentive can't place 3rd-party offers and doesn't own confirmation/payment surface. Where to harden the Rokt story: emphasize 3rd-party network value and non-endemic action mix that no owned-channel platform can replicate.</div>
+        <div class="item-link"><a href="https://www.attentive.com/press-releases/attentive-unveils-next-generation-of-agentic-ai-marketing-innovation-at-thread-2026" target="_blank" rel="noopener">Read Attentive press release &rarr;</a></div>
       </div>
-      <div class="item-meta">Lenny's Newsletter · May 3, 2026</div>
-      <div class="item-takeaway-label">Key takeaway</div>
-      <div class="item-takeaway">Notion's Head of Product argues that the first 10% of every project is now effectively free with AI, which collapses the cost of starting — so agency (the willingness to start, pursue, and own the messy middle) becomes the dominant differentiator, not skill accumulation. Internalize this and the career investment becomes obvious: stop optimizing for which AI tool to learn next, start optimizing for how many self-initiated bets you ship this quarter. The framing PMs should adopt is "I run experiments without being asked" — that's the muscle AI just made 10x more valuable.</div>
-      <div class="item-link"><a href="https://www.lennysnewsletter.com/p/why-cultivating-agency-matters-more" target="_blank" rel="noopener">Read the full piece →</a></div>
-    </div>
 
-    <div class="item must-read">
-      <div class="must-read-tag">Must read</div>
-      <div class="item-title">
-        <a href="https://www.lennysnewsletter.com/p/why-half-of-product-managers-are-in-trouble" target="_blank" rel="noopener">Why half of product managers are in trouble | Nikhyl Singhal (Meta, Google)</a>
+      <div class="item">
+        <span class="company-tag">Google Ads</span><span class="signal-tag">Product</span>
+        <div class="item-title">
+          <a href="https://www.adexchanger.com/ai/google-touts-its-ai-ad-tech-adoption-and-new-ai-max-features/" target="_blank" rel="noopener">Google touts AI Max adoption; DSA, Shopping &amp; Performance Max folding into AI Max</a>
+        </div>
+        <div class="item-meta">AdExchanger &middot; Google Marketing Live 2026</div>
+        <div class="item-takeaway-label">Why this matters for Rokt Thanks &amp; Ads</div>
+        <div class="item-takeaway">Starting September 2026, Dynamic Search Ads, automatically-created assets, and broad-match Search auto-upgrade to AI Max; Shopping and travel are next. Google is collapsing campaign types into one AI bidder while pushing "agentic shopping" UCP features. The signal for Rokt: Google continues to own pre-transaction intent and is reaching toward checkout via UCP &mdash; but their entire model is endemic / retargeting / search-intent, not post-purchase non-endemic. Reinforce in any Rokt narrative: Google's AI Max optimizes for clicks before the cart, Rokt monetizes the moment after the cart, and the ad units, partners, and creative formats are not interchangeable. The gap is real but it's the gap to defend, not assume.</div>
+        <div class="item-link"><a href="https://www.adexchanger.com/ai/google-touts-its-ai-ad-tech-adoption-and-new-ai-max-features/" target="_blank" rel="noopener">Read on AdExchanger &rarr;</a></div>
       </div>
-      <div class="item-meta">Lenny's Newsletter · April 19, 2026</div>
-      <div class="item-takeaway-label">Key takeaway</div>
-      <div class="item-takeaway">Nikhyl Singhal — ex-Meta/Google product exec, founder of The Skip — argues the next two years will be the most chaotic period in PM history, and the PMs who survive will be the ones who move from process-runner to high-leverage decision-maker. The career implication for senior PMs: AI is compressing the value of "PM as project coordinator" to near-zero, while bidding up "PM with sharp judgment on what to build and why." Apply this principle by auditing your week — what fraction was status-tracking, scoping, and meeting orchestration vs. genuine product judgment? Get that ratio above 50% or expect the role to harden against you.</div>
-      <div class="item-link"><a href="https://www.lennysnewsletter.com/p/why-half-of-product-managers-are-in-trouble" target="_blank" rel="noopener">Read the full piece →</a></div>
-    </div>
 
-    <div class="item">
-      <div class="item-title">
-        <a href="https://stratechery.com/2026/agents-over-bubbles/" target="_blank" rel="noopener">Agents Over Bubbles | Ben Thompson</a>
+      <div class="item">
+        <span class="company-tag">Fluent Commerce</span><span class="signal-tag">Funding + Product</span>
+        <div class="item-title">
+          <a href="https://fluentcommerce.com/resources/news/fluent-commerce-receives-a46m-from-bain-capital-to-accelerate-next-phase-of-growth/" target="_blank" rel="noopener">Fluent Commerce raises A$46M from Bain Capital; launches Fluent Connect AI integration platform</a>
+        </div>
+        <div class="item-meta">Fluent Commerce &middot; Feb 17, 2026 (funding); Jan 2026 (product)</div>
+        <div class="item-takeaway-label">Why this matters for Rokt Thanks &amp; Ads</div>
+        <div class="item-takeaway">Fluent Commerce is adjacent infrastructure rather than direct competition &mdash; an order management system collapsing integration time from "weeks-and-months" to "hours-and-days" via Fluent Connect AI. The strategic read: as commerce infra players get AI-fast, the Transaction Moment surface area Rokt plays in (Cart, Payment, Confirmation) is increasingly mediated by OMS/commerce platforms with their own data and decisioning ambitions. Watch for Fluent or similar OMS vendors to start surfacing post-purchase modules as native features &mdash; the integration moat for Rokt isn't the code, it's the network. Track this category for partnership opportunities and pre-empt before commerce infra eats placement real estate.</div>
+        <div class="item-link"><a href="https://fluentcommerce.com/resources/news/fluent-commerce-receives-a46m-from-bain-capital-to-accelerate-next-phase-of-growth/" target="_blank" rel="noopener">Read funding announcement &rarr;</a></div>
       </div>
-      <div class="item-meta">Stratechery · March 26, 2026</div>
-      <div class="item-takeaway-label">Key takeaway</div>
-      <div class="item-takeaway">Thompson — writing the morning of Nvidia's GTC — recants the AI bubble thesis based on three observations: LLM weaknesses are being addressed by raw compute, the number of humans who need to wield AI well to drive demand is decreasing because agents do it for them, and agentic returns hit the top line, not just the cost line. The framing PMs should adopt: stop sizing AI features by current human user counts and start sizing them by agents-per-user — your TAM math is wrong if every user is going to run multiple agents against your product. Internalize this for any AI roadmap planning.</div>
-      <div class="item-link"><a href="https://stratechery.com/2026/agents-over-bubbles/" target="_blank" rel="noopener">Read the full piece →</a></div>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <h2>Applied AI Workflows for PMs</h2>
+    <section>
+      <h2>Press &amp; Analyst Sentiment</h2>
 
-    <div class="item">
-      <div class="item-title">
-        <a href="https://every.to/on-every/introducing-proof" target="_blank" rel="noopener">Introducing Proof: a document editor built for agents</a>
+      <div class="item must-read">
+        <div class="must-read-tag">Must read</div>
+        <span class="company-tag">Criteo</span><span class="signal-tag">Earnings &amp; coverage</span>
+        <div class="item-title">
+          <a href="https://www.sec.gov/Archives/edgar/data/0001576427/000157642726000043/exhibit991q12026.htm" target="_blank" rel="noopener">Criteo Q1 2026: Activated Media Spend tops $1B, but Retail Media Contribution ex-TAC down 31%</a>
+        </div>
+        <div class="item-meta">Criteo 8-K (SEC) &middot; May 6, 2026</div>
+        <div class="item-takeaway-label">Why this matters for Rokt Thanks &amp; Ads</div>
+        <div class="item-takeaway">Criteo crossed $1B in quarterly Activated Media Spend for the first time, but gross profit fell 6% YoY and Retail Media Contribution ex-TAC dropped 31% (or 24% growth ex-scope changes with two clients). The strategic read for Rokt: this is the cleanest public-market signal that the legacy retargeting + retail media stack is under structural pressure even at scale, which sharpens the case for the Transaction Moment as a differentiated, less-commoditized surface. For any Rokt narrative against retail media competitors: Criteo's own results are the proof point that "more impressions" is no longer winning, and that perishable, high-intent moments command different unit economics than retargeting inventory.</div>
+        <div class="item-link"><a href="https://www.sec.gov/Archives/edgar/data/0001576427/000157642726000043/exhibit991q12026.htm" target="_blank" rel="noopener">Read Criteo Q1 2026 8-K &rarr;</a></div>
       </div>
-      <div class="item-meta">Every · May 24, 2026</div>
-      <div class="item-takeaway-label">Key takeaway</div>
-      <div class="item-takeaway">Every launched Proof, a free open-source document editor designed for the documents agents are increasingly writing — PRDs, bug reports, implementation plans, research briefs, strategy memos — with a colored rail tracking who wrote what (green for human, purple for AI) and full live multi-collaborator edits. Apply this to your own PM workflow this week: stop pasting AI drafts into Google Docs as if they were human-authored and start using a tool that makes the human/AI authorship boundary explicit. The mental model shift is treating provenance as a first-class document property — it changes how reviewers calibrate trust.</div>
-      <div class="item-link"><a href="https://every.to/on-every/introducing-proof" target="_blank" rel="noopener">Read the full piece →</a></div>
-    </div>
 
-    <div class="item">
-      <div class="item-title">
-        <a href="https://simonwillison.net/2026/May/21/datasette-agent/" target="_blank" rel="noopener">Datasette Agent: a conversational AI assistant for your data</a>
+      <div class="item">
+        <span class="company-tag">Wunderkind</span><span class="signal-tag">Press</span>
+        <div class="item-title">
+          <a href="https://www.adweek.com/adweek-wire/wunderkind-brings-identity-based-performance-marketing-solutions-to-shopify-merchants/" target="_blank" rel="noopener">Wunderkind brings identity-based performance marketing to Shopify merchants</a>
+        </div>
+        <div class="item-meta">AdWeek &middot; 2026</div>
+        <div class="item-takeaway-label">Why this matters for Rokt Thanks &amp; Ads</div>
+        <div class="item-takeaway">AdWeek covers Wunderkind's official Shopify App Store launch &mdash; pitched as "performance marketing for Shopify brands" with identity at the core. The sentiment frame in trade press: identity is "the new advantage" with the cookie era over. For Rokt Thanks: the SMB Shopify path Rokt already pursues via AfterSell is now contested ground &mdash; Wunderkind, Klaviyo (Wunderkind is now in the Klaviyo K:Partners marketplace), and Attentive are all converging on the Shopify mid-market. The defensible Rokt story has to anchor on: 3rd-party non-endemic offers (Wunderkind &amp; Klaviyo can't broker external brand inventory), and confirmation/payment placement which onsite players don't touch.</div>
+        <div class="item-link"><a href="https://www.adweek.com/adweek-wire/wunderkind-brings-identity-based-performance-marketing-solutions-to-shopify-merchants/" target="_blank" rel="noopener">Read on AdWeek &rarr;</a></div>
       </div>
-      <div class="item-meta">Simon Willison · May 21, 2026</div>
-      <div class="item-takeaway-label">Key takeaway</div>
-      <div class="item-takeaway">Willison shipped Datasette Agent, an extensible AI assistant that lets you ask questions of any data stored in Datasette and (with the charts plugin) generate visualizations on the fly. The principle to apply: every PM should have a "ask my data anything" surface over their product analytics — not a BI dashboard, a conversational agent with read access to the warehouse. Build this for yourself before your analytics team builds it for the whole org, because PMs who can interrogate data without filing a ticket compress every product decision loop. Treat this as a personal workflow you should own this quarter.</div>
-      <div class="item-link"><a href="https://simonwillison.net/2026/May/21/datasette-agent/" target="_blank" rel="noopener">Read the full piece →</a></div>
-    </div>
 
-    <div class="item must-read">
-      <div class="must-read-tag">Must read</div>
-      <div class="item-title">
-        <a href="https://www.lennysnewsletter.com/p/not-all-ai-agents-are-created-equal" target="_blank" rel="noopener">Not all AI agents are created equal</a>
+      <div class="item">
+        <span class="company-tag">Rokt</span><span class="signal-tag">Press</span>
+        <div class="item-title">
+          <a href="https://www.adexchanger.com/commerce/rokt-acquires-mparticle-for-300-million/" target="_blank" rel="noopener">Rokt acquires mParticle for $300M; ad-tech consolidation accelerates</a>
+        </div>
+        <div class="item-meta">AdExchanger / MarTech &middot; 2026</div>
+        <div class="item-takeaway-label">Why this matters for Rokt Thanks &amp; Ads</div>
+        <div class="item-takeaway">Rokt's own coverage in trade press frames the mParticle acquisition as CDP consolidation, with sentiment centering on the data activation play: mParticle clients can now advertise through Rokt's network. This is the public narrative competitors will read to understand Rokt's positioning &mdash; useful to know the framing being absorbed by the market: Rokt is now a "data-activation + Transaction Moment marketplace" not just an ad platform. Internalize this as the unified pitch when discussing competitive differentiation &mdash; the CDP layer is the wedge that distances Rokt from pure post-purchase players like Thanks.co and onsite identity players like Wunderkind.</div>
+        <div class="item-link"><a href="https://www.adexchanger.com/commerce/rokt-acquires-mparticle-for-300-million/" target="_blank" rel="noopener">Read on AdExchanger &rarr;</a></div>
       </div>
-      <div class="item-meta">Lenny's Newsletter · April 14, 2026</div>
-      <div class="item-takeaway-label">Key takeaway</div>
-      <div class="item-takeaway">The piece argues that the agent boom is producing wildly different categories of "agent" — from prompt-wrapped chatbots to genuinely autonomous multi-step systems — and most PM agent backlogs conflate them, leading to over- or under-investment. The framework PMs should adopt before writing a single agent PRD: classify the agent by autonomy level (assisted, supervised, autonomous), surface (chat, sidebar, background), and trust profile (read-only, write-with-confirmation, fully empowered) — then size investment to category, not to "agent" as a monolith. Apply this principle this week to triage your team's agent ideas honestly.</div>
-      <div class="item-link"><a href="https://www.lennysnewsletter.com/p/not-all-ai-agents-are-created-equal" target="_blank" rel="noopener">Read the full piece →</a></div>
-    </div>
-  </section>
+    </section>
+
+    <section>
+      <h2>Merchant &amp; Customer Sentiment</h2>
+
+      <div class="item">
+        <span class="company-tag">Thanks.co</span><span class="signal-tag">Light signal</span>
+        <div class="item-title">
+          <a href="https://www.thanks.co/" target="_blank" rel="noopener">Thanks.co: post-action ad placement positioning, 30M+ shoppers, performance pricing</a>
+        </div>
+        <div class="item-meta">Thanks.co &middot; current positioning</div>
+        <div class="item-takeaway-label">Why this matters for Rokt Thanks &amp; Ads</div>
+        <div class="item-takeaway">Trusted-source coverage of Thanks.co was light this week &mdash; no major press, funding, or analyst coverage surfaced from the allowlist. Their own positioning is closest to Rokt Thanks: "ads on post-action pages when intent is highest," performance pricing, 30M+ shoppers. The signal: Thanks.co operates with a smaller marketing footprint than Rokt's other competitors, which means competitive intel will come more from merchant signals (Shopify ecosystem, Reddit/r/shopify, direct sales conversations) than from press. Add Thanks.co to your manual watch list and ask the Rokt sales team for SMB-Shopify win/loss commentary this quarter.</div>
+        <div class="item-link"><a href="https://www.thanks.co/" target="_blank" rel="noopener">Visit Thanks.co &rarr;</a></div>
+      </div>
+
+      <div class="item">
+        <span class="company-tag">Attentive</span><span class="signal-tag">Merchant signal</span>
+        <div class="item-title">
+          <a href="https://www.attentive.com/blog/beyond-the-message-navigating-mobiles-new-era-in-2026" target="_blank" rel="noopener">Attentive: $6B brand-attributed revenue in Q1 2026; ~50% of customers on AI agents</a>
+        </div>
+        <div class="item-meta">Attentive &middot; 2026</div>
+        <div class="item-takeaway-label">Why this matters for Rokt Thanks &amp; Ads</div>
+        <div class="item-takeaway">Merchant sentiment around Attentive in 2026 trade press centers on AI agent adoption velocity &mdash; brands are reporting attributable revenue lift from AI Journeys and AI Grow at scale, which is reframing the question from "should we use SMS?" to "should our SMS run on autopilot?" Strategic implication for Rokt Thanks: the same merchants Rokt sells to (Shopify mid-market, DTC, enterprise commerce) are simultaneously being trained by Attentive to expect "AI orchestrates everything." Rokt Brain framing must keep pace &mdash; if "AI selects the most relevant offer in the Transaction Moment" doesn't sound at least as autonomous as Attentive's AI Campaigns, the sales motion gets harder.</div>
+        <div class="item-link"><a href="https://www.attentive.com/blog/beyond-the-message-navigating-mobiles-new-era-in-2026" target="_blank" rel="noopener">Read on Attentive blog &rarr;</a></div>
+      </div>
+    </section>
+  </div>
 
   <footer>
-    <div class="hint">Refreshes automatically every morning at 7:30 AM from a trusted-source allowlist (2026 only · last 90 days). Use the Reload button to refetch on demand.</div>
-    <div style="margin-top: 6px;">Curated by Claude · 9 stories · 3 must-reads · ~10 min read</div>
+    <div class="hint">AI + PM tab refreshes every morning at 7:30 AM. Competitive Pulse refreshes Monday mornings. Both pull from trusted-source allowlists.</div>
+    <div style="margin-top: 6px;">Curated by Claude &middot; AI+PM: 9 stories, 3 must-reads &middot; Competitive Pulse: 9 stories, 3 must-reads</div>
   </footer>
 
 <script>
+  // Date
   const today = new Date();
   document.getElementById('today').textContent = today.toLocaleDateString('en-US', {
     weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+  });
+
+  // Tabs
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.tab-panel');
+  // Restore last-used tab from localStorage if available
+  try {
+    const saved = localStorage.getItem('caroline-digest-tab');
+    if (saved && document.querySelector('.tab[data-tab="' + saved + '"]')) {
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      document.querySelector('.tab[data-tab="' + saved + '"]').classList.add('active');
+      document.getElementById('panel-' + saved).classList.add('active');
+    }
+  } catch (e) { /* ignore */ }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('panel-' + target).classList.add('active');
+      try { localStorage.setItem('caroline-digest-tab', target); } catch (e) {}
+    });
   });
 </script>
 </body>

@@ -1,8 +1,8 @@
 <!DOCTYPE html><script type="application/json" id="cowork-artifact-meta">
 {
-  "name": "AI+PM Digest — August 3, 2026",
+  "name": "AI+PM Digest — August 4, 2026",
   "schemaVersion": 1,
-  "description": "Caroline's AI + PM digest for August 3, 2026 — frontier AI moves, PM thought leadership, and applied workflows. Archived edition; live version at https://ctaan.github.io/AI-PM-Digest/."
+  "description": "Caroline's AI + PM digest for August 4, 2026 — frontier AI moves, PM thought leadership, and applied workflows. Archived edition; live version at https://ctaan.github.io/AI-PM-Digest/."
 }
 </script>
 <html lang="en">
@@ -308,68 +308,67 @@
 
       <div class="item">
         <div class="item-title">
-          <a href="https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/" target="_blank" rel="noopener">DeepSeek-V4-Flash-0731</a>
+          <a href="https://simonwillison.net/2026/Aug/2/open-letters/" target="_blank" rel="noopener">Open letters about AI development</a>
         </div>
-        <div class="item-meta">Simon Willison &middot; July 31, 2026</div>
+        <div class="item-meta">Simon Willison &middot; August 2, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">DeepSeek shipped a 304B-parameter Flash model with substantially stronger agentic capabilities at roughly $0.14 per million input and $0.27 per million output tokens &mdash; possibly the best value-per-intelligence model available right now. The mental model shift for PMs: the price floor for &ldquo;good enough&rdquo; agentic reasoning keeps dropping in weeks, not years, so features you shelved as too expensive to run at scale may already be viable. Apply this by re-pricing your parked AI ideas against the current cheapest capable model before your next planning cycle &mdash; the cost math that killed an idea last quarter is probably stale.</div>
-        <div class="item-link"><a href="https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">This summer produced dueling open letters that map the industry&rsquo;s fault lines: a Microsoft-shepherded &ldquo;Open Weights and American AI Leadership&rdquo; letter signed by 235 companies (NVIDIA, Amazon, Y Combinator, even OpenAI) defending open-weight models, Anthropic&rsquo;s counter-position warning about misuse and industrial-scale distillation, and &ldquo;Pacing the Frontier,&rdquo; signed by 1,324 frontier-AI employees asking governments to help deliberately slow automated AI research. The framing PMs should adopt: the open-vs-closed and pace-of-progress debates are no longer abstract policy &mdash; they directly shape which models stay legally available and how fast capabilities move. For any PM building on foundation models, internalize this as roadmap risk and diversify across providers and licensing models so a single regulatory or availability shock can&rsquo;t strand your feature.</div>
+        <div class="item-link"><a href="https://simonwillison.net/2026/Aug/2/open-letters/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <a href="https://simonwillison.net/2026/Jul/16/inkling/" target="_blank" rel="noopener">Inkling: Our open-weights model</a>
+          <a href="https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/" target="_blank" rel="noopener">OpenAI launches its new family of models with GPT-5.6</a>
         </div>
-        <div class="item-meta">Simon Willison &middot; July 16, 2026</div>
+        <div class="item-meta">TechCrunch &middot; July 9, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Mira Murati's Thinking Machines Lab released Inkling, an Apache-2.0 multimodal model (975B total, 41B active) pitched explicitly not as a frontier model but as a strong, tunable open-weights base for customization on their Tinker platform. The framing PMs should adopt: the strategic question is shifting from &ldquo;which model is smartest?&rdquo; to &ldquo;which base can I fine-tune and own for my specific domain?&rdquo; For any PM weighing an AI feature on sensitive or proprietary data, treat a customizable open-weights base as a real option alongside closed APIs &mdash; ownership and adaptability, not just raw benchmarks, increasingly decide the build-vs-buy call.</div>
-        <div class="item-link"><a href="https://simonwillison.net/2026/Jul/16/inkling/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">OpenAI shipped the GPT-5.6 family &mdash; Sol (the flagship, billed as its best coding model yet), Terra (balanced everyday), and Luna (cost-efficient) &mdash; following closely on competing releases from SpaceXAI and Meta the same week. The mental model shift for PMs: model families now arrive tiered by cost and capability, so the design question isn&rsquo;t &ldquo;which model?&rdquo; but &ldquo;which model per task?&rdquo; within a single product. Apply this by mapping each AI surface in your product to the cheapest tier that clears the quality bar, reserving the flagship only where reasoning depth actually moves the outcome.</div>
+        <div class="item-link"><a href="https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <a href="https://simonwillison.net/2026/Jul/8/introducing-gptlive/" target="_blank" rel="noopener">Introducing GPT-Live</a>
+          <a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/" target="_blank" rel="noopener">The latest AI news we announced in June 2026</a>
         </div>
-        <div class="item-meta">Simon Willison &middot; July 8, 2026</div>
+        <div class="item-meta">Google &middot; June 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">OpenAI finally upgraded ChatGPT voice mode with GPT-Live, which holds a real-time conversation while quietly delegating harder questions to a frontier model in the background and resuming the flow when the answer is ready. The framing PMs should adopt: &ldquo;fast conversational front-end + slow powerful back-end&rdquo; is becoming a standard UX pattern, letting you keep an interface responsive without sacrificing depth. Internalize this for any real-time product surface &mdash; you can route the easy 90% to a cheap fast model and silently escalate the hard 10%, rather than forcing one model to be both instant and brilliant.</div>
-        <div class="item-link"><a href="https://simonwillison.net/2026/Jul/8/introducing-gptlive/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Google&rsquo;s monthly roundup consolidates a month of Gemini and AI product announcements into a single changelog of what actually shipped across its stack. The framing PMs should adopt: frontier labs now release at a monthly cadence, so treating &ldquo;what&rsquo;s new&rdquo; as a quarterly scan leaves you a full capability generation behind. Internalize a monthly habit of skimming each major lab&rsquo;s own release notes &mdash; the primary source &mdash; so your roadmap assumptions about what models can do stay current rather than anchored to last quarter&rsquo;s limits.</div>
+        <div class="item-link"><a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
     </section>
 
     <section>
       <h2>PM Thought Leaders</h2>
 
-      <div class="item must-read">
-        <div class="must-read-tag">Must read</div>
+      <div class="item">
         <div class="item-title">
-          <a href="https://every.to/p/after-automation" target="_blank" rel="noopener">After Automation</a>
+          <a href="https://www.lennysnewsletter.com/p/how-tech-workers-are-feeling-in-2026" target="_blank" rel="noopener">How tech workers are feeling in 2026: a workforce splitting in two</a>
         </div>
-        <div class="item-meta">Every (Dan Shipper) &middot; May 21, 2026</div>
+        <div class="item-meta">Lenny&rsquo;s Newsletter (Noam Segal &amp; Lenny Rachitsky) &middot; July 7, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Shipper argues AI creates more expert human work, not less: models commoditize yesterday's competence, that cheap competence floods the market with sameness, and demand shifts to whoever can judge, direct, and differentiate the output &mdash; the &ldquo;human sandwich&rdquo; where a person frames the work and judges the result. The mental model shift for PMs: benchmarks measure a model inside a frame someone chose, and your durable value is being the framer, not competing with the frame. Apply this by deliberately moving up the stack &mdash; spend less time producing first drafts and more time setting the frame (what's worth building, what &ldquo;good&rdquo; means) and reviewing against it, because that's the work that compounds as automation rises.</div>
-        <div class="item-link"><a href="https://every.to/p/after-automation" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Lenny and Noam Segal&rsquo;s annual survey finds the tech workforce splitting along an AI fault line &mdash; one group feels amplified and more capable than ever, another feels shaken and unsure of its value, with overall burnout up 11 points in a year and four in ten worried about their jobs. The career implication is direct: which side you land on is increasingly a choice about how deliberately you build AI fluency, not something that happens to you. Internalize this as a prompt to treat hands-on AI skill-building as core career maintenance, and read the large &ldquo;ambivalent middle&rdquo; as the group most exposed to being overtaken.</div>
+        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/how-tech-workers-are-feeling-in-2026" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item must-read">
         <div class="must-read-tag">Must read</div>
         <div class="item-title">
-          <a href="https://www.lennysnewsletter.com/p/this-cpo-regrets-that-product-management" target="_blank" rel="noopener">This CPO regrets that product management exists</a>
+          <a href="https://www.lennysnewsletter.com/p/building-the-most-ai-pilled-engineering" target="_blank" rel="noopener">What happens after coding is solved?</a>
         </div>
-        <div class="item-meta">Lenny's Newsletter (Tom Verrilli, CPO of Whatnot) &middot; August 2, 2026</div>
+        <div class="item-meta">Lenny&rsquo;s Newsletter (Fiona Fung, Anthropic) &middot; June 21, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Verrilli, CPO of Whatnot, explains why he built the product org on the premise &ldquo;we regret that product management exists&rdquo; &mdash; fewer, more senior PMs doing real IC work outperform any ratio-driven headcount structure. The career implication is direct: the path forward is deepening into hands-on builder-and-decision-maker range, not accumulating people to coordinate. For any senior PM, internalize this as a signal to protect your own IC surface area &mdash; stay close enough to the product, data, and customers to make the calls yourself, because that's what the strongest orgs are now optimizing for.</div>
-        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/this-cpo-regrets-that-product-management" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Fung, who manages Anthropic&rsquo;s Claude Code and Cowork teams after 25 years as an engineer, argues that as coding itself gets automated, the binding constraint moves to knowing what to build and whether it&rsquo;s actually good &mdash; taste, judgment, and problem selection. The mental model shift for PMs: when execution is cheap, your differentiated value is upstream (framing the right problem) and downstream (judging the result), not in the middle. Apply this by investing more of your week in sharpening problem definition and quality bars and less in producing artifacts a capable agent can now generate &mdash; that&rsquo;s the work that compounds as coding stops being the bottleneck.</div>
+        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/building-the-most-ai-pilled-engineering" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <a href="https://www.lennysnewsletter.com/p/netflix-cpto-on-ai-and-the-future" target="_blank" rel="noopener">Why Netflix is betting on systems thinkers&mdash;not specialists&mdash;in the AI era</a>
+          <a href="https://www.lennysnewsletter.com/p/the-ai-paradox-dan-shipper" target="_blank" rel="noopener">The AI paradox: More automation, more humans, more work</a>
         </div>
-        <div class="item-meta">Lenny's Newsletter (Elizabeth Stone, Netflix CPTO) &middot; July 19, 2026</div>
+        <div class="item-meta">Lenny&rsquo;s Newsletter (Dan Shipper, Every) &middot; May 24, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Netflix's CPTO makes the case that as AI absorbs narrow specialist tasks, the people who thrive are systems thinkers &mdash; those who see across functions, connect the pieces, and reason about the whole rather than one slice. The framing PMs should adopt: breadth and the ability to integrate is becoming the differentiator, not depth in a single craft that AI is rapidly commoditizing. Apply this to your own development by deliberately widening your range &mdash; understand adjacent functions (data, design, GTM, infra) well enough to reason about how decisions ripple across them, since that cross-cutting judgment is exactly what AI struggles to replicate.</div>
-        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/netflix-cpto-on-ai-and-the-future" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Shipper reports that after automating coding, writing, design, and support at Every with Codex and Claude Code, there is paradoxically more human work than ever &mdash; because every agent still needs a person to direct and judge it, and cheap competence raises the premium on those who can review and steer. The framing PMs should adopt: automation doesn&rsquo;t shrink the role, it relocates it toward orchestration and editorial judgment. For any PM worried AI is hollowing out the job, internalize that the leverage now scales with how many capable agents you can effectively direct &mdash; build the muscle of running and reviewing agent output now.</div>
+        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/the-ai-paradox-dan-shipper" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
     </section>
 
@@ -379,32 +378,33 @@
       <div class="item must-read">
         <div class="must-read-tag">Must read</div>
         <div class="item-title">
-          <a href="https://www.latent.space/p/skill-engineering-design" target="_blank" rel="noopener">Skill engineering and the case against one-shot AI design</a>
+          <a href="https://www.lennysnewsletter.com/p/how-to-design-ai-agent-loops-schedules" target="_blank" rel="noopener">How to design AI agent loops: schedules, goals, and subagents in Claude Code and Codex</a>
         </div>
-        <div class="item-meta">Latent Space (Paul Bakaus) &middot; July 2, 2026</div>
+        <div class="item-meta">Lenny&rsquo;s Newsletter &middot; June 17, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Bakaus, creator of the open-source Impeccable design system, lays out &ldquo;skill engineering&rdquo; &mdash; encoding expert vocabulary (make it &ldquo;bolder,&rdquo; &ldquo;quieter,&rdquo; &ldquo;denser&rdquo;) into reusable skills that give agents domain knowledge and give humans precise steering, rejecting the fantasy of one-shot automation. The concrete workflow to adopt this week: let AI produce the first 80% (competent layout, base implementation) and reserve the final 20% &mdash; taste, context, point of view &mdash; for yourself. For PMs, the deeper lesson is that durable leverage lives in well-built skills that make your intent legible to an agent, not in one-off prompts, and that the role of PM and designer is converging on defining the &ldquo;what.&rdquo;</div>
-        <div class="item-link"><a href="https://www.latent.space/p/skill-engineering-design" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">This piece breaks down every agent-loop type &mdash; heartbeats, crons, hooks, and goal loops &mdash; and ships two live builds: a daily aging-PR reviewer that schedules itself at 10:15am and spawns its own subagents, and a weekly skills-identification loop that validates its own output in real time. The concrete workflow to build this week: pick one recurring PM chore and wire it as a scheduled, self-checking loop rather than a manual prompt you re-run each time. Internalize the five prerequisites the author says any loop needs before production &mdash; that&rsquo;s the difference between a reliable autonomous workflow and a demo that breaks silently.</div>
+        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/how-to-design-ai-agent-loops-schedules" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+      </div>
+
+      <div class="item must-read">
+        <div class="must-read-tag">Must read</div>
+        <div class="item-title">
+          <a href="https://www.lennysnewsletter.com/p/how-top-pms-increase-their-leverage" target="_blank" rel="noopener">How top PMs increase their leverage with AI</a>
+        </div>
+        <div class="item-meta">Lenny&rsquo;s Newsletter (Colin Matthews) &middot; June 30, 2026</div>
+        <div class="item-takeaway-label">Key takeaway</div>
+        <div class="item-takeaway">Matthews lays out a three-rung leverage ladder: on rung one AI assists your own work; on rung two you hand off tasks and review the output; on rung three AI completes multi-step tasks and checks its own results while you review only at the end. The framework PMs should adopt: name which rung each of your recurring tasks currently sits on, then deliberately push the highest-frequency ones up a rung. Apply this by picking one repetitive workflow &mdash; competitive scans, ticket triage, release notes &mdash; and moving it from rung two to rung three with self-checking, freeing that time for judgment work.</div>
+        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/how-top-pms-increase-their-leverage" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <a href="https://www.lennysnewsletter.com/p/openai-codex-lead-on-the-new-shape" target="_blank" rel="noopener">OpenAI Codex lead on the new shape of product work</a>
+          <a href="https://www.lennysnewsletter.com/p/how-to-get-your-entire-team-prototyping" target="_blank" rel="noopener">How to get your entire team prototyping with AI</a>
         </div>
-        <div class="item-meta">Lenny's Newsletter (Andrew Ambrosino) &middot; June 28, 2026</div>
+        <div class="item-meta">Lenny&rsquo;s Newsletter &middot; May 16, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">OpenAI's Codex lead describes how product work reshapes when a capable coding agent sits inside the workflow &mdash; PMs prototype, query, and build directly rather than handing specs across a wall, collapsing the distance between idea and working artifact. The mental model shift: the unit of PM output is moving from the document that describes the work to the working thing itself. Apply this by picking one bounded piece of your next initiative and taking it from idea to a functioning prototype with a coding agent, so you build the muscle of shipping directly before it becomes the baseline expectation of the role.</div>
-        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/openai-codex-lead-on-the-new-shape" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <a href="https://simonwillison.net/2026/Jul/21/cat-and-thariq/" target="_blank" rel="noopener">A Fireside Chat with Cat and Thariq from the Claude Code team</a>
-        </div>
-        <div class="item-meta">Simon Willison &middot; July 21, 2026</div>
-        <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">In this AI Engineer World's Fair session, two of Anthropic's Claude Code builders walk through how the team actually uses coding agents day to day &mdash; tool design, evals, agent security, and how they dogfood the product internally. The framing PMs should adopt: the people building agents treat evals and tool design as the real craft, not the model choice, and that discipline transfers directly to shipping any AI feature. Apply this principle by studying how the makers structure and verify agent behavior, then bring that eval-first rigor to your own product's AI surfaces rather than trusting vibes.</div>
-        <div class="item-link"><a href="https://simonwillison.net/2026/Jul/21/cat-and-thariq/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">The guide covers building reusable component libraries so AI prototypes come out consistent, team workflows that cut rework, and where in the process prototypes should actually be used &mdash; working across v0, Bolt, Cursor, and Magic Patterns. The framing PMs should adopt: prototyping is shifting from a specialist skill to a team-wide default, and the bottleneck becomes shared components and process, not individual tool skill. Apply this by standing up a small shared component library for your team so everyone&rsquo;s AI-generated mocks start from the same building blocks &mdash; that&rsquo;s what makes prototyping scale beyond one power user.</div>
+        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/how-to-get-your-entire-team-prototyping" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
     </section>
   </div>

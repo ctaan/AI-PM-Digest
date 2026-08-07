@@ -1,8 +1,8 @@
 <!DOCTYPE html><script type="application/json" id="cowork-artifact-meta">
 {
-  "name": "AI+PM Digest — August 5, 2026",
+  "name": "AI+PM Digest — August 7, 2026",
   "schemaVersion": 1,
-  "description": "Caroline's AI + PM digest for August 5, 2026 — frontier AI moves, PM thought leadership, and applied workflows. Archived edition; live version at https://ctaan.github.io/AI-PM-Digest/."
+  "description": "Caroline's AI + PM digest for August 7, 2026 — frontier AI moves, PM thought leadership, and applied workflows. Archived edition; live version at https://ctaan.github.io/AI-PM-Digest/."
 }
 </script>
 <html lang="en">
@@ -308,32 +308,32 @@
 
       <div class="item">
         <div class="item-title">
-          <a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-july-2026/" target="_blank" rel="noopener">The latest AI news we announced in July 2026</a>
+          <a href="https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/" target="_blank" rel="noopener">Anthropic updates Claude voice mode with more capable models</a>
         </div>
-        <div class="item-meta">Google &middot; July 2026</div>
+        <div class="item-meta">TechCrunch &middot; July 23, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Google&rsquo;s July roundup consolidates the month&rsquo;s Gemini and AI product shipping into one changelog &mdash; faster Gemini 3.6 Flash, 3.5 Flash-Lite, and Flash Cyber tiers explicitly tuned for scaling agentic workflows, plus Gemini Robotics ER 2, its most capable embodied-reasoning model yet. The framing PMs should adopt: labs now ship at a monthly cadence and are optimizing cheaper, faster tiers specifically for agent workloads, so &ldquo;which tier per task&rdquo; is a first-class product decision rather than an afterthought. Internalize a monthly habit of skimming each lab&rsquo;s own release notes so your roadmap assumptions track what models can do this month, not last quarter.</div>
-        <div class="item-link"><a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-july-2026/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Anthropic pushed more capable models into Claude&rsquo;s voice mode, continuing the industry&rsquo;s move to treat voice as a first-class input surface rather than a novelty. The framing PMs should adopt: modality is becoming a product decision on par with the underlying model &mdash; the same task can carry very different UX and trust dynamics in voice versus text. For any PM whose product could plausibly add a spoken interface, internalize that voice reshapes latency expectations, error tolerance, and how you design confirmations, so plan the interaction model deliberately instead of bolting speech onto a text flow.</div>
+        <div class="item-link"><a href="https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <a href="https://openai.com/index/chatgpt-for-your-most-ambitious-work/" target="_blank" rel="noopener">ChatGPT is now a partner for your most ambitious work</a>
+          <a href="https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/" target="_blank" rel="noopener">Anthropic launches Claude Sonnet 5 as a cheaper way to run agents</a>
         </div>
-        <div class="item-meta">OpenAI &middot; July 9, 2026</div>
+        <div class="item-meta">TechCrunch &middot; June 30, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">OpenAI shipped the GPT-5.6 family (Sol flagship, Terra everyday, Luna cost-efficient) alongside ChatGPT Work &mdash; an agent that gathers context across your apps and stays on multi-hour projects, producing finished sheets, slides, docs, and web apps. The mental model shift for PMs: the unit of AI work is moving from a single prompt-and-response to a long-running, multi-step agent you delegate to and review at the end. Apply this by picking one end-to-end deliverable in your week &mdash; a competitive scan, a launch brief &mdash; and testing whether an agent can carry it start-to-finish while you supply judgment only at the edges.</div>
-        <div class="item-link"><a href="https://openai.com/index/chatgpt-for-your-most-ambitious-work/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Sonnet 5 is positioned explicitly as a cheaper model for running agents &mdash; a signal that labs are now segmenting their lineups by cost-per-agentic-task, not just raw capability. The mental model shift for PMs: as agents take on multi-step work, unit economics live at the model tier you choose, so &ldquo;which model for which step&rdquo; becomes a margin decision baked into your product design. Apply this by mapping each step of an agentic feature to the cheapest model that clears the quality bar, rather than defaulting the whole flow to a flagship you don&rsquo;t need everywhere.</div>
+        <div class="item-link"><a href="https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <a href="https://simonwillison.net/2026/Aug/4/new-release-of-llm/" target="_blank" rel="noopener">New release of LLM adds reasoning traces, OpenAI Responses, server-side tools, and smarter logging</a>
+          <a href="https://simonwillison.net/2026/Jul/2/llm-coding-agent/" target="_blank" rel="noopener">Release: llm-coding-agent 0.1a0</a>
         </div>
-        <div class="item-meta">Simon Willison &middot; August 4, 2026</div>
+        <div class="item-meta">Simon Willison &middot; July 2, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">LLM 0.32 adds reasoning traces, OpenAI Responses support, server-side tools, and smarter logging &mdash; plumbing that makes it far easier to see what a model actually did on each run and to log every step. The framing PMs should adopt: observability of AI behavior (traces, logs, evals) is becoming table stakes, not a nice-to-have, as agents take more autonomous steps on your behalf. For any PM shipping an AI feature, internalize that &ldquo;how will we see what the model did and why&rdquo; belongs in the spec from day one &mdash; you can&rsquo;t debug, evaluate, or build user trust in a system you can&rsquo;t inspect.</div>
-        <div class="item-link"><a href="https://simonwillison.net/2026/Aug/4/new-release-of-llm/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Willison shipped an early coding-agent plugin for his LLM tool that runs tools in a loop toward a goal, with the ability to pause for human approval and resume from stored history. The framing PMs should adopt: agent designs are converging on a &ldquo;loop with checkpoints&rdquo; pattern where the interesting product questions are where the human is asked to approve and how state is preserved between steps. For any PM speccing an agent feature, internalize that the approval and resume points &mdash; not the raw autonomy &mdash; are what determine whether users trust and adopt it.</div>
+        <div class="item-link"><a href="https://simonwillison.net/2026/Jul/2/llm-coding-agent/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
     </section>
 
@@ -343,32 +343,33 @@
       <div class="item must-read">
         <div class="must-read-tag">Must read</div>
         <div class="item-title">
-          <a href="https://www.lennysnewsletter.com/p/this-cpo-regrets-that-product-management" target="_blank" rel="noopener">This CPO regrets that product management exists</a>
+          <a href="https://stratechery.com/2026/whos-afraid-of-chinese-models/" target="_blank" rel="noopener">Who&rsquo;s Afraid of Chinese Models?</a>
         </div>
-        <div class="item-meta">Lenny&rsquo;s Newsletter (Tom Verrilli, CPO of Whatnot) &middot; August 2, 2026</div>
+        <div class="item-meta">Stratechery (Ben Thompson) &middot; July 20, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Verrilli argues Whatnot deliberately runs with fewer, more senior PMs doing real individual-contributor work rather than staffing to a fixed PM-to-engineer ratio &mdash; the &ldquo;product management as a function&rdquo; scaffolding, he contends, often adds coordination cost without adding judgment. The mental model shift: seniority in PM is increasingly measured by the leverage of your direct contribution, not the size of the team or process you own. The career implication: invest in the skills that make you dangerous as an individual builder &mdash; sharp problem framing, hands-on prototyping, direct customer contact &mdash; because that&rsquo;s the profile these AI-era orgs are consolidating around.</div>
-        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/this-cpo-regrets-that-product-management" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Thompson argues that open-weight Chinese models like Kimi K3 aren&rsquo;t actually cheap &mdash; tokens are not a commodity because different models burn very different amounts of reasoning tokens to reach the same answer, so the real unit is &ldquo;intelligence&rdquo; and its true cost is a function of serving efficiency. The mental model shift for PMs: stop comparing models on headline per-token price and start comparing them on total cost to complete your actual task at your quality bar. Apply this principle to build-vs-buy and model-selection calls &mdash; run your real workflow end-to-end on each candidate and measure cost-to-outcome, because the &ldquo;cheaper&rdquo; model often loses once you count the tokens it needs to get there.</div>
+        <div class="item-link"><a href="https://stratechery.com/2026/whos-afraid-of-chinese-models/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+      </div>
+
+      <div class="item must-read">
+        <div class="must-read-tag">Must read</div>
+        <div class="item-title">
+          <a href="https://www.lennysnewsletter.com/p/netflix-cpto-on-ai-and-the-future" target="_blank" rel="noopener">Why Netflix is betting on systems thinkers&mdash;not specialists&mdash;in the AI era</a>
+        </div>
+        <div class="item-meta">Lenny&rsquo;s Newsletter (Elizabeth Stone, Netflix CPTO) &middot; July 19, 2026</div>
+        <div class="item-takeaway-label">Key takeaway</div>
+        <div class="item-takeaway">Netflix&rsquo;s CPTO makes the case that in the AI era the most valuable people are systems thinkers who can reason across the whole problem, not narrow specialists optimizing one slice. The career implication for PMs: as AI absorbs discrete execution tasks, your differentiation shifts to connecting strategy, data, UX, and business model into one coherent bet &mdash; breadth of judgment beats depth in any single craft. Internalize this by deliberately widening your range &mdash; get fluent enough in adjacent disciplines to hold the whole system in your head, because that&rsquo;s the profile leaders are now hiring and promoting for.</div>
+        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/netflix-cpto-on-ai-and-the-future" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <a href="https://www.mindtheproduct.com/be-a-product-builder-period/" target="_blank" rel="noopener">I spent 6 hours writing the spec. I built the prototype in 1. Here&rsquo;s what I learned</a>
+          <a href="https://www.lennysnewsletter.com/p/anthropics-first-technical-pm-on" target="_blank" rel="noopener">Anthropic&rsquo;s first technical PM on token maxing, the jagged edge, and living in the future</a>
         </div>
-        <div class="item-meta">Mind the Product &middot; May 19, 2026</div>
+        <div class="item-meta">Lenny&rsquo;s Newsletter (Dianne Penn, Anthropic) &middot; July 26, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">The author describes going from six hours writing a spec to one hour building the clickable prototype, and argues the PM/engineer/designer split is breaking because &ldquo;the economic logic broke&rdquo; once one person can go idea-to-tested-prototype in an afternoon &mdash; noting LinkedIn&rsquo;s ideal pod is now four builders, down from twelve specialists. The framing PMs should adopt: handoffs are becoming friction rather than necessity, and small teams of capable builders now out-run large teams coordinating specialists. Apply this by shifting effort from writing exhaustive specs toward building the thing well enough to test &mdash; increasingly, the spec <em>is</em> the prototype.</div>
-        <div class="item-link"><a href="https://www.mindtheproduct.com/be-a-product-builder-period/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <a href="https://stratechery.com/2026/the-openai-super-app-chatgpt-codex-whither-chat/" target="_blank" rel="noopener">The OpenAI Super App, ChatGPT = Codex, Whither Chat</a>
-        </div>
-        <div class="item-meta">Stratechery (Ben Thompson) &middot; July 14, 2026</div>
-        <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Thompson reads OpenAI&rsquo;s move to refashion Codex into the core of ChatGPT as a bet that the agentic &ldquo;do the work&rdquo; surface, not the chat box, is the real product &mdash; raising the question of whether the chat category OpenAI pioneered gets absorbed into agents. The framing PMs should adopt: the interaction model for AI products is shifting from conversation to delegation, and category leaders are willing to cannibalize their own hit surface to get there. For any PM designing an AI surface, internalize that &ldquo;chat with it&rdquo; may be a transitional UX &mdash; design for outcomes and hand-offs, not just turns of dialogue.</div>
-        <div class="item-link"><a href="https://stratechery.com/2026/the-openai-super-app-chatgpt-codex-whither-chat/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Anthropic&rsquo;s first technical PM discusses &ldquo;token maxing,&rdquo; the &ldquo;jagged edge&rdquo; of model capability, and building for where the technology is heading rather than where it is today. The framing PMs should adopt: model capability is jagged &mdash; startlingly strong at some tasks and brittle at adjacent ones &mdash; so roadmap decisions require mapping that uneven frontier rather than assuming smooth, uniform improvement. Apply this by prototyping against the model&rsquo;s actual edges before committing a feature, and by designing for the capability curve a few months out, so what you ship lands as the frontier catches up rather than obsoletes on arrival.</div>
+        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/anthropics-first-technical-pm-on" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
     </section>
 
@@ -378,33 +379,32 @@
       <div class="item must-read">
         <div class="must-read-tag">Must read</div>
         <div class="item-title">
-          <a href="https://every.to/guides/ai-product-management-guide" target="_blank" rel="noopener">Agent-native Product Management</a>
+          <a href="https://every.to/source-code/claude-code-for-product-managers" target="_blank" rel="noopener">Claude Code for Product Managers</a>
         </div>
         <div class="item-meta">Every (Marcus Moretti) &middot; Updated July 20, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Moretti &mdash; who runs the product Spiral as a one-person team &mdash; walks through two installable, agent-agnostic skills: <code>/ce:strategy</code>, which interviews you to produce a strategy document, and <code>/ce:product-pulse</code>, which stands up a metrics-reporting flow. The concrete workflow to build this week: instead of prompting an agent from scratch each time, package your recurring PM rituals (strategy drafting, metrics review) as reusable skills the agent runs consistently. Internalize the shift from &ldquo;prompting&rdquo; to &ldquo;authoring skills&rdquo; &mdash; that&rsquo;s what turns AI from a one-off assistant into repeatable leverage you and your team can rely on.</div>
-        <div class="item-link"><a href="https://every.to/guides/ai-product-management-guide" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
-      </div>
-
-      <div class="item must-read">
-        <div class="must-read-tag">Must read</div>
-        <div class="item-title">
-          <a href="https://simonwillison.net/2026/Jul/27/an-opinionated-guide-to-which-ai-to-use-to-do-stuff/" target="_blank" rel="noopener">An opinionated guide to which AI to use to do stuff</a>
-        </div>
-        <div class="item-meta">Simon Willison &middot; July 27, 2026</div>
-        <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Willison lays out a task-by-task map of which AI tool to reach for depending on what you&rsquo;re actually trying to do, cutting through the paralysis of a dozen overlapping models and apps. The framework PMs should adopt: don&rsquo;t standardize on one tool, standardize on a decision rule for matching task to tool, and revisit it monthly as capabilities shift. Apply this by writing your own one-page &ldquo;which AI for which task&rdquo; cheat sheet across your workflows &mdash; research, drafting, data, prototyping &mdash; because the act of deciding deliberately is what compounds your leverage over ad-hoc tool-switching.</div>
-        <div class="item-link"><a href="https://simonwillison.net/2026/Jul/27/an-opinionated-guide-to-which-ai-to-use-to-do-stuff/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Moretti runs an entire product solo by making Claude Code the hub of his PM work: he personally writes only the roadmap, and Claude drafts every PRD and ticket, collapsing work that used to span ten apps into a single chat thread. The concrete workflow to build this week: pick one PM ritual &mdash; ticket writing, PRD drafting, weekly metrics &mdash; and move it into one agent-driven thread where you supply direction and the agent produces the artifact. Internalize his framing that &ldquo;the conversation is the work,&rdquo; and that as writing gets cheap, your leverage shifts to deciding what to build and reviewing sharply rather than producing every document by hand.</div>
+        <div class="item-link"><a href="https://every.to/source-code/claude-code-for-product-managers" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <a href="https://simonwillison.net/2026/Jul/31/datasette-agent/" target="_blank" rel="noopener">Release: datasette-agent 0.4a0</a>
+          <a href="https://www.lennysnewsletter.com/p/openai-codex-lead-on-the-new-shape" target="_blank" rel="noopener">OpenAI Codex lead on the new shape of product work</a>
         </div>
-        <div class="item-meta">Simon Willison &middot; July 31, 2026</div>
+        <div class="item-meta">Lenny&rsquo;s Newsletter (Andrew Ambrosino, OpenAI) &middot; June 28, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Willison released datasette-agent 0.4a0, an LLM-powered agent that lets you explore and query a database conversationally rather than by hand-writing SQL. The framing PMs should adopt: conversational data access is collapsing the distance between a product question and its answer, so the bottleneck moves from &ldquo;can I get the query written&rdquo; to &ldquo;do I know which question to ask.&rdquo; For any PM who waits on analysts for routine pulls, internalize that natural-language data agents are becoming a core self-serve skill &mdash; the PMs who can interrogate their own data will iterate faster than those who queue for it.</div>
-        <div class="item-link"><a href="https://simonwillison.net/2026/Jul/31/datasette-agent/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">The Codex lead describes how product work is changing shape as agents take on more of the build, shifting the PM&rsquo;s job toward framing problems, setting direction, and reviewing agent output. The mental model shift: the artifact you produce matters less than the quality of the intent and constraints you give the system and the taste you apply to what it returns. Apply this by getting hands-on with an agentic build tool on a real slice of your product &mdash; the fastest way to develop judgment about the new shape of the work is to do it, not read about it.</div>
+        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/openai-codex-lead-on-the-new-shape" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <a href="https://simonwillison.net/2026/Aug/4/llm-anthropic/" target="_blank" rel="noopener">Release: llm-anthropic 0.26</a>
+        </div>
+        <div class="item-meta">Simon Willison &middot; August 4, 2026</div>
+        <div class="item-takeaway-label">Key takeaway</div>
+        <div class="item-takeaway">The updated llm-anthropic plugin adds server-side provider tools &mdash; web search, web fetch, code execution, and Anthropic MCP &mdash; usable directly through a single interface. The framing PMs should adopt: the model is increasingly a general-purpose engine you compose with tools, so product capability now comes from which tools you wire up and how, not from the base model alone. For any PM shaping an AI feature, internalize that tool selection and orchestration are the design surface &mdash; the differentiated experience lives in the combination of search, retrieval, and execution you assemble around the model.</div>
+        <div class="item-link"><a href="https://simonwillison.net/2026/Aug/4/llm-anthropic/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
     </section>
   </div>

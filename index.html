@@ -1,8 +1,8 @@
 <!DOCTYPE html><script type="application/json" id="cowork-artifact-meta">
 {
-  "name": "AI+PM Digest — August 26, 2026",
+  "name": "AI+PM Digest — August 27, 2026",
   "schemaVersion": 1,
-  "description": "Caroline's AI + PM digest for August 26, 2026 — frontier AI moves, PM thought leadership, and applied workflows. Archived edition; live version at https://ctaan.github.io/AI-PM-Digest/."
+  "description": "Caroline's AI + PM digest for August 27, 2026 — frontier AI moves, PM thought leadership, and applied workflows. Archived edition; live version at https://ctaan.github.io/AI-PM-Digest/."
 }
 </script>
 <html lang="en">
@@ -306,34 +306,35 @@
     <section>
       <h2>AI Model &amp; Product Releases</h2>
 
-      <div class="item">
-        <div class="item-title">
-          <a href="https://techcrunch.com/2026/08/25/claude-cowork-finally-remembers-what-you-told-the-app-in-chat/" target="_blank" rel="noopener">Claude Cowork finally remembers what you told the app in chat</a>
-        </div>
-        <div class="item-meta">TechCrunch &middot; August 25, 2026</div>
-        <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Anthropic merged the memory systems behind chat and Cowork, so what Claude learns in one surface carries into the other &mdash; and it now writes memories topic-by-topic as you talk rather than summarizing at the end of a conversation. It also exposes the stored memory for users to read, edit, or delete. The mental model shift for PMs is that persistent state is becoming the product surface where multi-surface AI tools either cohere or fall apart, and the differentiator is not &ldquo;does it remember&rdquo; but &ldquo;can the user inspect and correct what it remembered.&rdquo; Apply this principle to any AI feature on your roadmap that accumulates user context: ship the edit-and-delete affordance in the same release as the memory itself, not as a follow-on.</div>
-        <div class="item-link"><a href="https://techcrunch.com/2026/08/25/claude-cowork-finally-remembers-what-you-told-the-app-in-chat/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
-      </div>
-
-      <div class="item">
+      <div class="item must-read">
+        <div class="must-read-tag">Must read</div>
         <div class="item-title">
           <a href="https://simonwillison.net/2026/Aug/16/qwen-38-27b/" target="_blank" rel="noopener">Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things</a>
         </div>
         <div class="item-meta">Simon Willison &middot; August 16, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Willison's read on a strong new open-weight model is that quality is no longer the problem &mdash; the default reasoning budget is, because the model burns tokens overthinking work that did not need it. That is a cost and latency story dressed as a capability story, and it is exactly the failure mode that does not show up in a benchmark table. For any PM evaluating models, internalize this as a new column in your comparison: not just accuracy per task, but tokens spent per task at default settings, because a model that is excellent and verbose can be more expensive in production than a weaker model that is terse.</div>
+        <div class="item-takeaway">Willison finds Alibaba's Apache-2.0, vision-capable Qwen 3.8 27B genuinely strong on quality but prone to burning enormous reasoning budgets on trivial prompts &mdash; a failure mode that never shows up on a leaderboard. The mental model shift: with reasoning models, the default behaviour is now a product decision, and &ldquo;good model&rdquo; and &ldquo;good latency/cost profile&rdquo; have come apart. For any PM shipping an AI feature, apply this by treating reasoning effort as an explicit, tunable parameter in the spec &mdash; set a token or time ceiling per surface, and measure p95 latency and cost per task alongside accuracy, or an excellent model will quietly wreck your unit economics.</div>
         <div class="item-link"><a href="https://simonwillison.net/2026/Aug/16/qwen-38-27b/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <a href="https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/" target="_blank" rel="noopener">Anthropic is turning Claude Code's auto mode on by default</a>
+          <a href="https://openai.com/index/jalapeno-first-results/" target="_blank" rel="noopener">Jalape&ntilde;o's first results show industry-leading speed and efficiency in AI inference</a>
         </div>
-        <div class="item-meta">TechCrunch &middot; August 9, 2026</div>
+        <div class="item-meta">OpenAI &middot; August 25, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Starting August 14, auto mode became the default for Pro, Max, and Team accounts &mdash; meaning the agent proceeds without asking permission at each step unless you opt out. Changing a default is the strongest product statement a company can make about where it thinks the trust threshold now sits, and it moves the burden from &ldquo;convince me to let you act&rdquo; to &ldquo;stop me if you object.&rdquo; The framing PMs should adopt: every confirmation dialog in your own product is a bet about user trust that expires, and the interesting question to bring to your next review is which of yours you would flip to default-on if you believed your own reliability numbers.</div>
-        <div class="item-link"><a href="https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">OpenAI published first benchmarks for Jalape&ntilde;o, its Broadcom-built custom inference chip: 1.5&ndash;1.9&times; more work per watt at peak throughput and 1.7&ndash;3.6&times; lower end-to-end latency across three models, breaking the usual throughput-versus-latency tradeoff &mdash; though volume deployment only arrives in 2027. The framing PMs should adopt: inference cost and latency are on a steep, hardware-driven decline curve, so features that look economically impossible today may pencil out within a roadmap cycle. Apply this principle by keeping a &ldquo;too expensive for now&rdquo; list of AI ideas with the cost assumption written down explicitly, and re-testing it each quarter rather than killing the idea outright.</div>
+        <div class="item-link"><a href="https://openai.com/index/jalapeno-first-results/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <a href="https://techcrunch.com/2026/08/10/as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model/" target="_blank" rel="noopener">As AI-led attacks multiply, OpenAI launches a new cyber model</a>
+        </div>
+        <div class="item-meta">TechCrunch &middot; August 10, 2026</div>
+        <div class="item-takeaway-label">Key takeaway</div>
+        <div class="item-takeaway">OpenAI expanded Daybreak, its cyber-defence service, with a new security-focused model &mdash; arriving not long after Anthropic shipped its own cyber model, Mythos &mdash; as AI-driven attacks accelerate. The mental model shift: frontier labs are now specialising models by threat domain, which means &ldquo;which model&rdquo; is becoming a risk-and-compliance question, not just a capability question. For any PM working in a data-sensitive business, internalize this by pulling security into AI feature design at the spec stage: document what the model can see, what it can act on, and what an adversarial input could make it do &mdash; before the feature reaches review.</div>
+        <div class="item-link"><a href="https://techcrunch.com/2026/08/10/as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
     </section>
 
@@ -343,33 +344,32 @@
       <div class="item must-read">
         <div class="must-read-tag">Must read</div>
         <div class="item-title">
-          <a href="https://stratechery.com/2026/whos-afraid-of-chinese-models/" target="_blank" rel="noopener">Who's Afraid of Chinese Models?</a>
+          <a href="https://www.lennysnewsletter.com/p/this-cpo-regrets-that-product-management" target="_blank" rel="noopener">This CPO regrets that product management exists | Tom Verrilli (CPO of Whatnot)</a>
         </div>
-        <div class="item-meta">Stratechery (Ben Thompson) &middot; August 18, 2026</div>
+        <div class="item-meta">Lenny's Newsletter &middot; August 2, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Thompson reads China's open-model posture as a textbook &ldquo;commoditize your complements&rdquo; play: give the models away, because the value accrues to whoever leads in the physical layer &mdash; robotics and manufacturing &mdash; that widely available models will unlock. The non-obvious move is recognizing that a company giving something away for free is telling you exactly where it thinks the profit pool actually is. Apply this principle to your own competitive analysis: when a rival makes part of their stack free or open, stop asking whether they can afford it and start asking which adjacent layer they intend to own, because that layer is the one you should be defending.</div>
-        <div class="item-link"><a href="https://stratechery.com/2026/whos-afraid-of-chinese-models/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
-      </div>
-
-      <div class="item must-read">
-        <div class="must-read-tag">Must read</div>
-        <div class="item-title">
-          <a href="https://www.lennysnewsletter.com/p/how-top-pms-increase-their-leverage" target="_blank" rel="noopener">How top PMs increase their leverage with AI</a>
-        </div>
-        <div class="item-meta">Lenny's Newsletter &middot; June 30, 2026</div>
-        <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">The piece lays out how AI-native PMs are actually operating in mid-2026: prototyping with real code, querying data conversationally over MCP rather than waiting on an analyst, and running coding agents with enough confidence to trust the output. The career implication is that the leverage gap between PMs is no longer about judgment alone &mdash; it is about how much of your own analysis and prototyping you can do without a queue in front of it. Pick the one bottleneck in your week that most often ends with &ldquo;I'll ask someone,&rdquo; and build the AI workflow that removes it; that single change compounds faster than any framework you adopt this quarter.</div>
-        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/how-top-pms-increase-their-leverage" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Tom Verrilli &mdash; previously CPO at Twitch and product growth lead at Twitter, now at Whatnot ($8B+ GMV, the fastest-growing US marketplace) &mdash; built his product org on the premise that he &ldquo;regrets product management exists,&rdquo; arguing that fewer, more senior PMs doing genuine IC work beat any PM-to-engineer ratio. The career implication is direct: seniority is being redefined as depth of hands-on ownership rather than span of coordination, and the PMs who thrive are the ones doing the work, not routing it. Internalize this by auditing your own week &mdash; what fraction went to coordination overhead versus building the artifact, analysis, or decision yourself? That ratio is fast becoming the real measure of a senior PM.</div>
+        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/this-cpo-regrets-that-product-management" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <a href="https://stratechery.com/2026/ai-and-the-human-condition/" target="_blank" rel="noopener">AI and the Human Condition</a>
+          <a href="https://www.lennysnewsletter.com/p/netflix-cpto-on-ai-and-the-future" target="_blank" rel="noopener">Why Netflix is betting on systems thinkers&mdash;not specialists&mdash;in the AI era | Elizabeth Stone (CPTO)</a>
         </div>
-        <div class="item-meta">Stratechery (Ben Thompson) &middot; August 3, 2026</div>
+        <div class="item-meta">Lenny's Newsletter &middot; July 19, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Thompson steps back from market structure to the broader implications of AI &mdash; job displacement and what happens to content production once LLMs handle the bulk of it. The value for a PM is not the prediction but the altitude: most product debates about AI are conducted at the feature level, and the ones that age well are argued at the level of what human work the product is actually displacing or amplifying. The framing to adopt in your own roadmap conversations is to name explicitly which human task each AI feature replaces versus augments, because teams that are vague about that distinction ship features users quietly resent.</div>
-        <div class="item-link"><a href="https://stratechery.com/2026/ai-and-the-human-condition/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Netflix CPTO Elizabeth Stone, who oversees engineering, product, and design, explains why the company is hiring and promoting systems thinkers over narrow specialists in the AI era, and how excellence is maintained as an operating system rather than a slogan. The career implication: as AI absorbs the specialist production layer, the differentiated skill is holding the whole system &mdash; user, business, data, and technical constraints &mdash; in your head at once and reasoning across it. For a senior PM, apply this by deliberately taking on one problem this quarter that spans two functions you don't own, and practising the end-to-end reasoning rather than delegating each slice.</div>
+        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/netflix-cpto-on-ai-and-the-future" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <a href="https://www.lennysnewsletter.com/p/how-tech-workers-actually-feel-about" target="_blank" rel="noopener">How tech workers actually feel about AI in 2026 | Annual AI sentiment survey (Noam Segal)</a>
+        </div>
+        <div class="item-meta">Lenny's Newsletter &middot; July 12, 2026</div>
+        <div class="item-takeaway-label">Key takeaway</div>
+        <div class="item-takeaway">The second annual Tech Worker Sentiment Survey, run with research leader Noam Segal across thousands of product, engineering, design, data, and go-to-market workers, finds the workforce split almost exactly in half between thriving and shaken, sorts respondents into four archetypes (Energized, Conflicted, Disoriented, Resentful), and reports burnout jumping 11 points in a single year. The framing PMs should adopt: AI adoption inside your team is an emotional and change-management problem at least as much as a tooling one. Apply this by naming the archetypes explicitly when you roll out an AI workflow &mdash; the Disoriented need scaffolding and a first win, the Resentful need honest answers about what changes for them, and neither is solved by another enablement deck.</div>
+        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/how-tech-workers-actually-feel-about" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
     </section>
 
@@ -379,12 +379,22 @@
       <div class="item must-read">
         <div class="must-read-tag">Must read</div>
         <div class="item-title">
-          <a href="https://simonwillison.net/2026/Aug/21/llm-openrouter/" target="_blank" rel="noopener">Release: llm-openrouter 0.7</a>
+          <a href="https://every.to/source-code/claude-code-for-product-managers" target="_blank" rel="noopener">Claude Code for Product Managers</a>
         </div>
-        <div class="item-meta">Simon Willison &middot; August 21, 2026</div>
+        <div class="item-meta">Every (Marcus Moretti) &middot; Updated August 16, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">The release adds three server-side tools &mdash; Shell, WebFetch, and WebSearch &mdash; that you switch on with a single flag like <code>-T WebSearch</code>. The concrete thing worth building this week is a small command-line research loop of your own: point a model at WebSearch and WebFetch, give it a question you ask repeatedly (competitor pricing changes, a weekly landscape scan), and let it run. The broader lesson is that capability is increasingly delivered as tools you enable rather than models you swap, which means the PM skill that compounds is knowing which tools to grant an agent and which to withhold &mdash; a permissions question, not a model-selection one.</div>
-        <div class="item-link"><a href="https://simonwillison.net/2026/Aug/21/llm-openrouter/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Marcus Moretti, GM of Every's AI writing product Spiral, walks through how he actually uses Claude Code for non-engineering PM work &mdash; planning, monitoring, and research &mdash; treating a coding agent as a general-purpose analyst with filesystem and tool access rather than a developer tool. This is the most concrete thing here to build this week: pick one recurring PM job (a metrics narrative, a competitor sweep, a feedback triage pass), point an agent at the relevant files and data sources, and have it write its output to a folder that becomes your product's running memory. The mental model shift is that the terminal-style agent, not the chat window, is where repeatable PM leverage now lives &mdash; because it can read your actual artifacts and leave durable ones behind.</div>
+        <div class="item-link"><a href="https://every.to/source-code/claude-code-for-product-managers" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <a href="https://openai.com/index/how-enterprises-put-ai-to-work/" target="_blank" rel="noopener">From assistance to execution: How enterprises put AI to work</a>
+        </div>
+        <div class="item-meta">OpenAI &middot; August 12, 2026</div>
+        <div class="item-takeaway-label">Key takeaway</div>
+        <div class="item-takeaway">OpenAI's two enterprise reports show the frontier gap widening fast &mdash; top-decile firms now generate 8.3&times; the output tokens per active user of typical firms, up from a 2.6&times; gap in January &mdash; and the growth is concentrated outside engineering, with weekly Codex users up 108&times; in legal, 41&times; in sales and recruiting, and 26&times; in marketing since February versus 5&times; in engineering. What separates frontier firms isn't model access but connecting agents to company context and tools with real permissions and human review. Apply this by auditing which of your recurring workflows an agent can actually see &mdash; the constraint is almost never the model, it's that the agent has no access to your data, docs, and tools.</div>
+        <div class="item-link"><a href="https://openai.com/index/how-enterprises-put-ai-to-work/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item">
@@ -393,15 +403,8 @@
         </div>
         <div class="item-meta">Simon Willison &middot; August 4, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Willison calls this the most significant LLM release since launch &mdash; visible reasoning traces, server-side provider tools, and redesigned content-addressable logs &mdash; and he notes he now accepts the definition &ldquo;an LLM agent runs tools in a loop to achieve a goal&rdquo; after years of refusing the word. Reasoning traces to standard error and structured logs are the unglamorous half of agentic work: they are how you find out why a run went wrong instead of guessing. For any PM working on an agentic feature, internalize that observability is a shippable requirement, not engineering hygiene &mdash; if your team cannot replay a bad run, you cannot make a roadmap decision about it.</div>
+        <div class="item-takeaway">LLM 0.32 &mdash; Willison's biggest release since the project launched &mdash; adds visible reasoning traces, three server-side tools (Shell, WebFetch, WebSearch) toggled with flags like <code>-T WebSearch</code>, and redesigned content-addressable SQLite logs of every prompt and response. The under-appreciated part for PMs is the logging: a queryable local history of prompts, outputs, and reasoning is exactly the substrate you need to build a real eval set instead of relying on vibes. Apply this by piping your own recurring prompts through a logged CLI for two weeks, then mining the log for the cases where output quality actually varied &mdash; that's your first honest eval suite, assembled from real work rather than invented test cases.</div>
         <div class="item-link"><a href="https://simonwillison.net/2026/Aug/4/new-release-of-llm/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">Applied workflows &mdash; light coverage today</div>
-        <div class="item-meta">Allowlist scan &middot; August 26, 2026</div>
-        <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Today's allowlist returned light coverage in this category &mdash; check back tomorrow.</div>
       </div>
     </section>
   </div>
@@ -531,7 +534,7 @@
 
   <footer>
     <div class="hint">AI + PM tab refreshes every morning at 7:30 AM. Competitive Pulse refreshes Monday mornings. Both pull from trusted-source allowlists.</div>
-    <div style="margin-top: 6px;">Curated by Claude &middot; AI+PM: 9 stories &middot; 3 must-reads &middot; ~10 min read &middot; Competitive Pulse: 9 stories, 3 must-reads</div>
+    <div style="margin-top: 6px;">Curated by Claude &middot; AI+PM: 9 stories, 3 must-reads, ~10 min read &middot; Competitive Pulse: 9 stories, 3 must-reads</div>
   </footer>
 
 <script>

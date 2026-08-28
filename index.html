@@ -1,8 +1,8 @@
 <!DOCTYPE html><script type="application/json" id="cowork-artifact-meta">
 {
-  "name": "AI+PM Digest — August 27, 2026",
+  "name": "AI+PM Digest — August 28, 2026",
   "schemaVersion": 1,
-  "description": "Caroline's AI + PM digest for August 27, 2026 — frontier AI moves, PM thought leadership, and applied workflows. Archived edition; live version at https://ctaan.github.io/AI-PM-Digest/."
+  "description": "Caroline's AI + PM digest for August 28, 2026 — frontier AI moves, PM thought leadership, and applied workflows. Archived edition; live version at https://ctaan.github.io/AI-PM-Digest/."
 }
 </script>
 <html lang="en">
@@ -306,35 +306,34 @@
     <section>
       <h2>AI Model &amp; Product Releases</h2>
 
-      <div class="item must-read">
-        <div class="must-read-tag">Must read</div>
+      <div class="item">
         <div class="item-title">
-          <a href="https://simonwillison.net/2026/Aug/16/qwen-38-27b/" target="_blank" rel="noopener">Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things</a>
+          <a href="https://simonwillison.net/2026/Aug/26/qwen38-flash-next/" target="_blank" rel="noopener">Qwen3.8-Flash-Next</a>
         </div>
-        <div class="item-meta">Simon Willison &middot; August 16, 2026</div>
+        <div class="item-meta">Simon Willison &middot; August 26, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Willison finds Alibaba's Apache-2.0, vision-capable Qwen 3.8 27B genuinely strong on quality but prone to burning enormous reasoning budgets on trivial prompts &mdash; a failure mode that never shows up on a leaderboard. The mental model shift: with reasoning models, the default behaviour is now a product decision, and &ldquo;good model&rdquo; and &ldquo;good latency/cost profile&rdquo; have come apart. For any PM shipping an AI feature, apply this by treating reasoning effort as an explicit, tunable parameter in the spec &mdash; set a token or time ceiling per surface, and measure p95 latency and cost per task alongside accuracy, or an excellent model will quietly wreck your unit economics.</div>
-        <div class="item-link"><a href="https://simonwillison.net/2026/Aug/16/qwen-38-27b/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Willison flags Qwen3.8-Flash-Next, a multimodal mixture-of-experts model that Qwen is positioning as an early preview of the architecture behind the coming Qwen4. The framing PMs should adopt: labs now ship architecture previews as products, which means the model you evaluate this quarter is a public beta of next quarter's default. Apply this by writing model choice into your specs as a swappable dependency with a documented eval, not a fixed assumption &mdash; the teams that get burned are the ones who hard-code behaviour around one model's quirks.</div>
+        <div class="item-link"><a href="https://simonwillison.net/2026/Aug/26/qwen38-flash-next/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <a href="https://openai.com/index/jalapeno-first-results/" target="_blank" rel="noopener">Jalape&ntilde;o's first results show industry-leading speed and efficiency in AI inference</a>
+          <a href="https://techcrunch.com/2026/08/26/surprise-z-ai-is-the-ai-lab-behind-the-mysterious-ox-alpha-model/" target="_blank" rel="noopener">Surprise: Z.ai is the AI lab behind the mysterious Ox Alpha model</a>
         </div>
-        <div class="item-meta">OpenAI &middot; August 25, 2026</div>
+        <div class="item-meta">TechCrunch &middot; August 26, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">OpenAI published first benchmarks for Jalape&ntilde;o, its Broadcom-built custom inference chip: 1.5&ndash;1.9&times; more work per watt at peak throughput and 1.7&ndash;3.6&times; lower end-to-end latency across three models, breaking the usual throughput-versus-latency tradeoff &mdash; though volume deployment only arrives in 2027. The framing PMs should adopt: inference cost and latency are on a steep, hardware-driven decline curve, so features that look economically impossible today may pencil out within a roadmap cycle. Apply this principle by keeping a &ldquo;too expensive for now&rdquo; list of AI ideas with the cost assumption written down explicitly, and re-testing it each quarter rather than killing the idea outright.</div>
-        <div class="item-link"><a href="https://openai.com/index/jalapeno-first-results/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">The anonymous &ldquo;Ox Alpha&rdquo; model that had been circulating and drawing attention turns out to be the work of Z.ai &mdash; a reveal that only landed after the model had already been judged on its output alone. The mental model shift: stealth releases and blind evaluation are now a standard go-to-market motion in AI, and brand reputation is a lagging indicator of capability. For any PM selecting a model or a vendor, internalize this by running your own blind bake-off on your actual tasks before you look at the logo &mdash; the ranking you get from lab prestige and the ranking you get from your own data increasingly disagree.</div>
+        <div class="item-link"><a href="https://techcrunch.com/2026/08/26/surprise-z-ai-is-the-ai-lab-behind-the-mysterious-ox-alpha-model/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <a href="https://techcrunch.com/2026/08/10/as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model/" target="_blank" rel="noopener">As AI-led attacks multiply, OpenAI launches a new cyber model</a>
+          <a href="https://openai.com/index/gpt-5-6-in-kiro/" target="_blank" rel="noopener">Advancing price-performance for developers with GPT&#8209;5.6 in Kiro</a>
         </div>
-        <div class="item-meta">TechCrunch &middot; August 10, 2026</div>
+        <div class="item-meta">OpenAI &middot; August 24, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">OpenAI expanded Daybreak, its cyber-defence service, with a new security-focused model &mdash; arriving not long after Anthropic shipped its own cyber model, Mythos &mdash; as AI-driven attacks accelerate. The mental model shift: frontier labs are now specialising models by threat domain, which means &ldquo;which model&rdquo; is becoming a risk-and-compliance question, not just a capability question. For any PM working in a data-sensitive business, internalize this by pulling security into AI feature design at the spec stage: document what the model can see, what it can act on, and what an adversarial input could make it do &mdash; before the feature reaches review.</div>
-        <div class="item-link"><a href="https://techcrunch.com/2026/08/10/as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">OpenAI put GPT&#8209;5.6 into Kiro with price-performance as the headline claim rather than raw capability &mdash; the pitch is more work per dollar for developers, not a new benchmark record. The framing PMs should adopt: the competitive frontier has partly moved from &ldquo;what can the model do&rdquo; to &ldquo;what does it cost to do it at your volume,&rdquo; and that shift is what makes previously marginal features viable. Apply this principle by re-running the unit economics on any AI feature you shelved on cost grounds in the last two quarters, because the assumption you killed it on has probably moved.</div>
+        <div class="item-link"><a href="https://openai.com/index/gpt-5-6-in-kiro/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
     </section>
 
@@ -344,32 +343,32 @@
       <div class="item must-read">
         <div class="must-read-tag">Must read</div>
         <div class="item-title">
-          <a href="https://www.lennysnewsletter.com/p/this-cpo-regrets-that-product-management" target="_blank" rel="noopener">This CPO regrets that product management exists | Tom Verrilli (CPO of Whatnot)</a>
+          <a href="https://stratechery.com/2026/autonomy-and-innovation/" target="_blank" rel="noopener">Autonomy and Innovation</a>
         </div>
-        <div class="item-meta">Lenny's Newsletter &middot; August 2, 2026</div>
+        <div class="item-meta">Stratechery (Ben Thompson) &middot; August 24, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Tom Verrilli &mdash; previously CPO at Twitch and product growth lead at Twitter, now at Whatnot ($8B+ GMV, the fastest-growing US marketplace) &mdash; built his product org on the premise that he &ldquo;regrets product management exists,&rdquo; arguing that fewer, more senior PMs doing genuine IC work beat any PM-to-engineer ratio. The career implication is direct: seniority is being redefined as depth of hands-on ownership rather than span of coordination, and the PMs who thrive are the ones doing the work, not routing it. Internalize this by auditing your own week &mdash; what fraction went to coordination overhead versus building the artifact, analysis, or decision yourself? That ratio is fast becoming the real measure of a senior PM.</div>
-        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/this-cpo-regrets-that-product-management" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Thompson's sharpest argument in months: automated attackers have positive expected value from every attempt, while automated defenders have negative expected value &mdash; a successful patch merely preserves the status quo, and one bad patch breaks production. That asymmetry, he argues, is the real reason AI diffusion is slow: incumbents evaluate AI through a &ldquo;what could blow up in our faces&rdquo; lens, so they keep humans in the loop and stay bottlenecked, which is why the genuinely AI-native companies will be startups rather than incumbents overhauling how they work. The mental model shift for a senior PM at an established company: your organisation's caution is structural, not a failure of will, so the leverage is in finding the workflows where a mistake is cheap and reversible and automating those end to end &mdash; partial automation just moves the bottleneck.</div>
+        <div class="item-link"><a href="https://stratechery.com/2026/autonomy-and-innovation/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <a href="https://www.lennysnewsletter.com/p/netflix-cpto-on-ai-and-the-future" target="_blank" rel="noopener">Why Netflix is betting on systems thinkers&mdash;not specialists&mdash;in the AI era | Elizabeth Stone (CPTO)</a>
+          <a href="https://www.lennysnewsletter.com/p/how-to-close-100k-1m-deals-step-by" target="_blank" rel="noopener">How to close $100K+ enterprise deals, step by step | Jen Abel</a>
         </div>
-        <div class="item-meta">Lenny's Newsletter &middot; July 19, 2026</div>
+        <div class="item-meta">Lenny's Newsletter &middot; August 23, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Netflix CPTO Elizabeth Stone, who oversees engineering, product, and design, explains why the company is hiring and promoting systems thinkers over narrow specialists in the AI era, and how excellence is maintained as an operating system rather than a slogan. The career implication: as AI absorbs the specialist production layer, the differentiated skill is holding the whole system &mdash; user, business, data, and technical constraints &mdash; in your head at once and reasoning across it. For a senior PM, apply this by deliberately taking on one problem this quarter that spans two functions you don't own, and practising the end-to-end reasoning rather than delegating each slice.</div>
-        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/netflix-cpto-on-ai-and-the-future" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Jen Abel walks through the mechanics of closing six- and seven-figure enterprise deals as a step-by-step process rather than a personality trait. The career implication for PMs is underrated: enterprise deal motion is where product strategy meets the actual buying committee, and PMs who can read a deal &mdash; who signs, what they're accountable for, what kills it in procurement &mdash; get invited into revenue conversations rather than briefed after them. For any PM in a B2B or partner-led business, apply this by sitting in on two live enterprise deals this quarter and mapping the objections back to specific roadmap gaps.</div>
+        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/how-to-close-100k-1m-deals-step-by" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <a href="https://www.lennysnewsletter.com/p/how-tech-workers-actually-feel-about" target="_blank" rel="noopener">How tech workers actually feel about AI in 2026 | Annual AI sentiment survey (Noam Segal)</a>
+          <a href="https://www.lennysnewsletter.com/p/openais-head-of-design-this-is-the" target="_blank" rel="noopener">OpenAI's Head of Design: This is the best time in history to be a designer | Ian Silber</a>
         </div>
-        <div class="item-meta">Lenny's Newsletter &middot; July 12, 2026</div>
+        <div class="item-meta">Lenny's Newsletter &middot; August 16, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">The second annual Tech Worker Sentiment Survey, run with research leader Noam Segal across thousands of product, engineering, design, data, and go-to-market workers, finds the workforce split almost exactly in half between thriving and shaken, sorts respondents into four archetypes (Energized, Conflicted, Disoriented, Resentful), and reports burnout jumping 11 points in a single year. The framing PMs should adopt: AI adoption inside your team is an emotional and change-management problem at least as much as a tooling one. Apply this by naming the archetypes explicitly when you roll out an AI workflow &mdash; the Disoriented need scaffolding and a first win, the Resentful need honest answers about what changes for them, and neither is solved by another enablement deck.</div>
-        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/how-tech-workers-actually-feel-about" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">OpenAI's head of design argues this is the best moment in history to be a designer &mdash; a striking claim given how much of the production layer of design AI now absorbs. The framing PMs should adopt: when execution gets cheap, taste and judgment about what to build become the scarce inputs, and that logic applies to product management every bit as much as to design. Internalize this by shifting where you spend your own scarce hours &mdash; less time producing artifacts an agent could draft, more time on the judgment calls about which problem is worth solving and what &ldquo;good&rdquo; looks like when you see it.</div>
+        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/openais-head-of-design-this-is-the" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
     </section>
 
@@ -379,32 +378,33 @@
       <div class="item must-read">
         <div class="must-read-tag">Must read</div>
         <div class="item-title">
-          <a href="https://every.to/source-code/claude-code-for-product-managers" target="_blank" rel="noopener">Claude Code for Product Managers</a>
+          <a href="https://every.to/p/ai-is-ready-organizations-aren-t" target="_blank" rel="noopener">AI Is Ready. Organizations Aren't.</a>
         </div>
-        <div class="item-meta">Every (Marcus Moretti) &middot; Updated August 16, 2026</div>
+        <div class="item-meta">Every (Natalia Quintero) &middot; June 29, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Marcus Moretti, GM of Every's AI writing product Spiral, walks through how he actually uses Claude Code for non-engineering PM work &mdash; planning, monitoring, and research &mdash; treating a coding agent as a general-purpose analyst with filesystem and tool access rather than a developer tool. This is the most concrete thing here to build this week: pick one recurring PM job (a metrics narrative, a competitor sweep, a feedback triage pass), point an agent at the relevant files and data sources, and have it write its output to a folder that becomes your product's running memory. The mental model shift is that the terminal-style agent, not the chat window, is where repeatable PM leverage now lives &mdash; because it can read your actual artifacts and leave durable ones behind.</div>
-        <div class="item-link"><a href="https://every.to/source-code/claude-code-for-product-managers" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Natalia Quintero, who runs Every Consulting, makes the case that AI adoption isn't being held back by the models but by the organisation, and lays out a five-step framework as a concrete 60-day plan. The number that should stick: of nearly 2,000 organisations surveyed, only 6% met the criteria for success &mdash; and those companies were roughly three times as likely to have fundamentally redesigned their workflows, not just bought tools. She also names a specific failure pattern worth watching for: leaders making planning decisions about AI without ever having worked directly with it on sophisticated tasks. This is the most actionable thing here this week &mdash; pick one workflow you own, redesign it around what an agent can actually do, and treat the tool purchase as the last step rather than the first.</div>
+        <div class="item-link"><a href="https://every.to/p/ai-is-ready-organizations-aren-t" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+      </div>
+
+      <div class="item must-read">
+        <div class="must-read-tag">Must read</div>
+        <div class="item-title">
+          <a href="https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/" target="_blank" rel="noopener">Don't classify. Hallucinate!</a>
+        </div>
+        <div class="item-meta">Simon Willison &middot; August 14, 2026</div>
+        <div class="item-takeaway-label">Key takeaway</div>
+        <div class="item-takeaway">Faced with 1,856 tags on his own blog &mdash; far too many to fit in a prompt &mdash; Willison highlights Doug Turnbull's inversion: don't hand the model your taxonomy and ask it to classify. Let it invent the tags it thinks apply, then use vector embeddings to snap each invented tag to the closest real one. It's a genuinely non-obvious technique with wide application, and it's the concrete thing to build this week: any PM sitting on a large messy taxonomy &mdash; support tickets, feature requests, churn reasons, partner categories &mdash; can run this pattern over a backlog of free-text feedback and get usable structure without maintaining a prompt-sized label list. The mental model shift: constrain the model's output after generation, not before.</div>
+        <div class="item-link"><a href="https://simonwillison.net/2026/Aug/14/dont-classify-hallucinate/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <a href="https://openai.com/index/how-enterprises-put-ai-to-work/" target="_blank" rel="noopener">From assistance to execution: How enterprises put AI to work</a>
+          <a href="https://simonwillison.net/2026/Aug/21/stop-making-tuis/" target="_blank" rel="noopener">Stop Making TUIs</a>
         </div>
-        <div class="item-meta">OpenAI &middot; August 12, 2026</div>
+        <div class="item-meta">Simon Willison &middot; August 21, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">OpenAI's two enterprise reports show the frontier gap widening fast &mdash; top-decile firms now generate 8.3&times; the output tokens per active user of typical firms, up from a 2.6&times; gap in January &mdash; and the growth is concentrated outside engineering, with weekly Codex users up 108&times; in legal, 41&times; in sales and recruiting, and 26&times; in marketing since February versus 5&times; in engineering. What separates frontier firms isn't model access but connecting agents to company context and tools with real permissions and human review. Apply this by auditing which of your recurring workflows an agent can actually see &mdash; the constraint is almost never the model, it's that the agent has no access to your data, docs, and tools.</div>
-        <div class="item-link"><a href="https://openai.com/index/how-enterprises-put-ai-to-work/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <a href="https://simonwillison.net/2026/Aug/4/new-release-of-llm/" target="_blank" rel="noopener">New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging</a>
-        </div>
-        <div class="item-meta">Simon Willison &middot; August 4, 2026</div>
-        <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">LLM 0.32 &mdash; Willison's biggest release since the project launched &mdash; adds visible reasoning traces, three server-side tools (Shell, WebFetch, WebSearch) toggled with flags like <code>-T WebSearch</code>, and redesigned content-addressable SQLite logs of every prompt and response. The under-appreciated part for PMs is the logging: a queryable local history of prompts, outputs, and reasoning is exactly the substrate you need to build a real eval set instead of relying on vibes. Apply this by piping your own recurring prompts through a logged CLI for two weeks, then mining the log for the cases where output quality actually varied &mdash; that's your first honest eval suite, assembled from real work rather than invented test cases.</div>
-        <div class="item-link"><a href="https://simonwillison.net/2026/Aug/4/new-release-of-llm/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Willison links Thomas Ptacek's argument that developers should stop shipping terminal interfaces for personal tools and build real native GUIs, because coding agents have collapsed the cost of getting a usable interface. The framing PMs should adopt: &ldquo;we'll ship it as a script/CLI/spreadsheet because a real UI is too expensive&rdquo; is an assumption that quietly expired, and it applies directly to the internal tools your team lives in. Apply this by taking one internal workflow currently held together by a spreadsheet or a manual process and having an agent build an actual interface for it &mdash; the cost of finding out is now an afternoon.</div>
+        <div class="item-link"><a href="https://simonwillison.net/2026/Aug/21/stop-making-tuis/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
     </section>
   </div>

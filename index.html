@@ -1,8 +1,8 @@
 <!DOCTYPE html><script type="application/json" id="cowork-artifact-meta">
 {
-  "name": "AI+PM Digest — September 4, 2026",
+  "name": "AI+PM Digest — September 5, 2026",
   "schemaVersion": 1,
-  "description": "Caroline's AI + PM digest for September 4, 2026 — frontier AI moves, PM thought leadership, and applied workflows. Archived edition; live version at https://ctaan.github.io/AI-PM-Digest/."
+  "description": "Caroline's AI + PM digest for September 5, 2026 — frontier AI moves, PM thought leadership, and applied workflows. Archived edition; live version at https://ctaan.github.io/AI-PM-Digest/."
 }
 </script>
 <html lang="en">
@@ -306,35 +306,35 @@
     <section>
       <h2>AI Model &amp; Product Releases</h2>
 
-      <div class="item">
-        <div class="item-title">
-          <a href="https://simonwillison.net/2026/Sep/3/gpt6-astra/" target="_blank" rel="noopener">GPT&#8209;6 Astra</a>
-        </div>
-        <div class="item-meta">Simon Willison &middot; September 3, 2026</div>
-        <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Astra is rolling out to ChatGPT Plus, Pro, Business and Enterprise plus the API and AWS, priced identically to Claude Fable 5/5.1 at $10 per million input and $50 per million output &mdash; OpenAI has explicitly priced this as a Fable competitor. The headline 99.9% on ARC-AGI 3 comes with a caveat worth internalizing: that score used OpenAI&rsquo;s custom &ldquo;Provider Adapter&rdquo; harness for $19K, while the default harness scored 62.7% for <em>more</em> money. Artificial Analysis still has Astra tied with Sol on general intelligence and behind Fable 5.1. The mental model shift for PMs: capability is now a property of the harness as much as the model, so when a vendor quotes you a benchmark, the follow-up question is which scaffolding produced it &mdash; because that scaffolding is the part you'd have to build.</div>
-        <div class="item-link"><a href="https://simonwillison.net/2026/Sep/3/gpt6-astra/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
-      </div>
-
       <div class="item must-read">
         <div class="must-read-tag">Must read</div>
         <div class="item-title">
-          <a href="https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/" target="_blank" rel="noopener">Understanding ChatGPT Work</a>
+          <a href="https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads/" target="_blank" rel="noopener">A milestone in expanding access to AI</a>
         </div>
-        <div class="item-meta">Simon Willison &middot; August 30, 2026</div>
+        <div class="item-meta">OpenAI &middot; August 31, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Willison does the work OpenAI didn&rsquo;t: he reverse-engineers what ChatGPT Work actually <em>does</em> versus Chat, and the answer is a genuinely different product &mdash; code execution with open internet access, a full headless Chrome that can fill forms and run JavaScript against the DOM, a filesystem persisted across sessions, sub-agents, and deployable websites. His critique is the transferable lesson: OpenAI explains Work &ldquo;in terms of what it&rsquo;s for, not what it actually does,&rdquo; and their official Chat-versus-Work guidance is useless because every category it lists is something people already do in Chat. That&rsquo;s a positioning failure any PM can make. Apply this principle to your own feature docs &mdash; if a user can&rsquo;t derive the decision rule from your description, you&rsquo;ve written marketing, not documentation. Also note he flags Work as combining all three legs of his &ldquo;lethal trifecta&rdquo; (private data, untrusted content, exfiltration path), which is the right lens for reviewing any agentic feature on your own roadmap.</div>
-        <div class="item-link"><a href="https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">ChatGPT Ads hit $1B annualized run rate in under 200 days, is live in 40+ countries, and self-service Ads Manager now covers India, Europe, the Middle East and North Africa &mdash; with CPC and outcome-optimized bidding already the majority of campaigns, plus Pixel, Conversions API, product feeds and custom audiences. The positioning line is the one to sit with: OpenAI describes ChatGPT as the place &ldquo;where decisions take shape,&rdquo; collapsing discovery, consideration and decision into a single conversation, and reports 80%+ of ad-driven traffic being new customers for one partner. For any PM working in commerce or performance media, this is a new intent surface being built between the shopper and every downstream channel &mdash; upstream of search, upstream of the cart. Apply this principle to your own product's position: map which of your acquisition or monetization surfaces sit <em>after</em> a decision the user is now making inside a chat window, and be honest about which of those the model could route around.</div>
+        <div class="item-link"><a href="https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <a href="https://techcrunch.com/2026/09/01/open-ais-astra-model-is-on-the-way-and-very-good-at-breaking-into-computer-systems/" target="_blank" rel="noopener">OpenAI&rsquo;s Astra model is on the way &mdash; and very good at breaking into computer systems</a>
+          <a href="https://www.anthropic.com/news/model-hardware-standard-research-preview" target="_blank" rel="noopener">Previewing the Model Hardware Standard</a>
         </div>
-        <div class="item-meta">TechCrunch &middot; September 1, 2026</div>
+        <div class="item-meta">Anthropic &middot; August 27, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Two days before launch, OpenAI disclosed that Astra is the first model to cross its own &ldquo;critical cybersecurity threshold&rdquo; &mdash; capable of finding unknown security flaws and exploiting them without human guidance &mdash; and that access to those specific capabilities will be gated more tightly than the rest of the model. The pattern to notice isn&rsquo;t the security story, it&rsquo;s the shipping story: capability tiers within a single model, released on different access schedules. For any PM working on a product with a powerful and a dangerous mode, this is the emerging template &mdash; ship the model broadly, meter the sharp edge separately, and publish the threshold you used. Internalize it as a design pattern you may need rather than a lab-only concern.</div>
-        <div class="item-link"><a href="https://techcrunch.com/2026/09/01/open-ais-astra-model-is-on-the-way-and-very-good-at-breaking-into-computer-systems/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Anthropic opened a research preview of the Model Hardware Standard &mdash; a shared specification for AI agents to safely operate physical devices &mdash; to a first group of scientific research labs and advanced manufacturers. The interesting move for PMs isn't the robotics angle, it's the sequencing: publish a <em>standard</em> before the category exists, and gate the preview to a narrow, high-competence cohort rather than shipping broadly. That's a deliberate play to define the safety vocabulary others will have to adopt. The framing PMs should adopt: when your product opens a new class of risk, a published spec is a strategic asset, not compliance overhead &mdash; it sets the terms competitors and regulators argue on.</div>
+        <div class="item-link"><a href="https://www.anthropic.com/news/model-hardware-standard-research-preview" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <a href="https://techcrunch.com/2026/08/12/google-unveils-pixel-11-lineup-new-airtag-rival-and-gemini-features-at-made-by-google-2026/" target="_blank" rel="noopener">Everything announced at Made by Google &rsquo;26: Pixel 11, Pixel Watch 5, Pixel Tag, and tons of Gemini features</a>
+        </div>
+        <div class="item-meta">TechCrunch &middot; August 12, 2026</div>
+        <div class="item-takeaway-label">Key takeaway</div>
+        <div class="item-takeaway">Google's hardware event bundled the Pixel 11 line with a wave of Gemini features, landing in the same month it shipped Gemini 3.7 Flash &mdash; billed as its most intelligent workhorse model for coding and agents, arriving just three weeks after 3.6 Flash and at roughly half the price per million tokens. Two things worth internalizing: model refresh cycles are now measured in weeks, and the price of the &ldquo;good enough&rdquo; tier is falling faster than the frontier tier. For any PM budgeting an AI feature, that means your unit-economics model has a shorter half-life than your roadmap does &mdash; build the cost assumption as a variable you re-check quarterly, not a number you defend.</div>
+        <div class="item-link"><a href="https://techcrunch.com/2026/08/12/google-unveils-pixel-11-lineup-new-airtag-rival-and-gemini-features-at-made-by-google-2026/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
     </section>
 
@@ -344,32 +344,32 @@
       <div class="item must-read">
         <div class="must-read-tag">Must read</div>
         <div class="item-title">
-          <a href="https://www.reforge.com/blog/product-management-is-not-dead" target="_blank" rel="noopener">Product Management is Decidedly Not Dead: An Optimistic (and Realistic) Take</a>
+          <a href="https://www.mindtheproduct.com/ai-agents-are-your-newest-product-feature-is-your-security-thinking-keeping-up/" target="_blank" rel="noopener">AI agents are your newest product feature. Is your security thinking keeping up?</a>
         </div>
-        <div class="item-meta">Reforge (Ravi Mehta event recap) &middot; August 6, 2026</div>
+        <div class="item-meta">Mind the Product (Mohit Bansal) &middot; August 25, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">The single most useful reframe here: most PM best practices were never designed to build the best products &mdash; they were designed to avoid expensive mistakes. Nobody ever wanted an MVP; MVPs exist because building was costly and you needed signal before spending more. The whole spec &rarr; wireframe &rarr; prototype &rarr; MVP ladder was a cost-justification structure, and when AI collapses the cost of working software the ladder collapses with it. What replaces the assembly line is closer to a jazz band, with working software as the artifact of communication rather than a PRD. The career implication is precise: <strong>your job moves from prioritizer to curator</strong> &mdash; from gatekeeping what gets built to judging what deserves to ship. Ravi&rsquo;s companion point is the one to keep: things that move at human speed (customer conversations, stakeholder alignment, onboarding bandwidth, culture, brand) haven&rsquo;t accelerated at all, so as the org speeds up, steering becomes the scarce skill. The craft-versus-taste framework for AI features is worth stealing outright.</div>
-        <div class="item-link"><a href="https://www.reforge.com/blog/product-management-is-not-dead" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">The sharpest observation here: in agent discovery sessions, PMs are making security decisions without anyone naming them as such. Bansal isolates the four that matter &mdash; <strong>tool scope</strong> (what an adversary can hijack), <strong>trust levels</strong> (what the agent treats as instruction versus data), <strong>human-in-the-loop</strong> (a scoping decision keyed to reversibility, not a UX preference), and <strong>data access</strong> (least privilege decided at spec time, not implementation). His forcing question is one you can use verbatim this week: <em>if this agent were acting for someone who wanted to cause damage instead of help, what could it do?</em> The mental model shift is from &ldquo;what can this feature do?&rdquo; to &ldquo;what can this feature be made to do?&rdquo; &mdash; and his point about <em>when</em> to ask it is the hard part, because discovery is built for optimism. Two practices to steal outright: put the second question in your spec template so it gets asked every time, and before launch have someone hide an instruction inside content the agent reads to see whether it obeys. He also makes the career argument directly: agent features that can't clear enterprise security review don't ship to enterprise customers, so fluency in trust boundaries is a deal-closing skill, not a compliance chore.</div>
+        <div class="item-link"><a href="https://www.mindtheproduct.com/ai-agents-are-your-newest-product-feature-is-your-security-thinking-keeping-up/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <a href="https://every.to/p/every-answers-your-ai-questions" target="_blank" rel="noopener">33 Questions Executives Ask About AI&mdash;Answered</a>
+          <a href="https://stratechery.com/2026/an-interview-with-figma-ceo-dylan-field-about-design-and-ai/" target="_blank" rel="noopener">An Interview with Figma CEO Dylan Field About Design and AI</a>
         </div>
-        <div class="item-meta">Every (Natalia Quintero &amp; Mike Taylor) &middot; August 28, 2026</div>
+        <div class="item-meta">Stratechery (Ben Thompson) &middot; June 25, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Every&rsquo;s consulting leads took 33 questions from a 400-executive session on strategy, skeptics, tool selection, governance and org restructuring &mdash; so this is a map of where organizations are actually stuck, not where vendors say they are. Their answer on scaling adoption is counterintuitive and immediately applicable: don&rsquo;t try to lift everyone a little, give your most AI-curious people permission to build ambitious things, because &ldquo;it&rsquo;s easier to raise the ceiling than the floor.&rdquo; One fluent person building ten good skills beats ten people each building one. The framing PMs should adopt when pitching internal AI enablement: sequence it as vision &rarr; named champions &rarr; prove high-value skills &rarr; scale, and resist the instinct to start with company-wide training.</div>
-        <div class="item-link"><a href="https://every.to/p/every-answers-your-ai-questions" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Field is the most exposed CEO in software to the question every PM is quietly asking: if agents can generate working interfaces, what is the design step actually <em>for</em>? Worth reading for how a category leader articulates the durable value of the craft layer when the production layer gets cheap &mdash; and for the strategic bind of owning the tool where the work happens while the work itself changes shape underneath you. The career implication for PMs mirrors it exactly: when artifact production collapses in cost, the defensible skill migrates to judgment about which artifact deserves to exist. Internalize this before your own deliverables (specs, mocks, tickets) get commoditized around you.</div>
+        <div class="item-link"><a href="https://stratechery.com/2026/an-interview-with-figma-ceo-dylan-field-about-design-and-ai/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <a href="https://stratechery.com/2026/an-interview-with-openai-president-greg-brockman-about-astra-and-alignment/" target="_blank" rel="noopener">An Interview with OpenAI President Greg Brockman About Astra and Alignment</a>
+          <a href="https://stratechery.com/2026/the-capex-train-keeps-rolling/" target="_blank" rel="noopener">2026.33: The CapEx Train Keeps Rolling</a>
         </div>
-        <div class="item-meta">Stratechery (Ben Thompson) &middot; September 4, 2026</div>
+        <div class="item-meta">Stratechery (Ben Thompson) &middot; August 14, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Recorded before the Astra announcement, this covers OpenAI&rsquo;s place on the value chain &mdash; squeezed between companies closer to the consumer like Microsoft and suppliers like Nvidia &mdash; plus Thompson&rsquo;s pointed question of whether having a billion users is actually a <em>disadvantage</em>, and a direct challenge on whether OpenAI took security seriously before the Hugging Face incident. The value-chain squeeze is the part with legs for PMs: a company can be the most visible name in a category and still hold the thinnest slice of the margin, because power sits with whoever the customer can&rsquo;t route around. Apply this to your own product&rsquo;s position &mdash; map who sits above and below you, and be honest about which of those relationships you could survive losing.</div>
-        <div class="item-link"><a href="https://stratechery.com/2026/an-interview-with-openai-president-greg-brockman-about-astra-and-alignment/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">The framing to take from this week's roundup is &ldquo;The Capital Constraint&rdquo;: everyone knows AI is short on compute and may soon be short on power &mdash; but what if it's short on <em>capital</em>? Thompson's blunt version is that if AI is as valuable as it seems, it should pay for itself, and that hasn't happened yet; Nvidia's new long-duration funding mechanism and Google's equity-tapping are bridges to sustainable AI revenue that also widen the blast radius if the bet turns. The mental model shift for PMs: the AI capability you're planning around is currently subsidized by financing, not by proven unit economics. Apply this to roadmap planning &mdash; when you assume inference costs keep falling, name that as an assumption with a funding dependency behind it, and have a version of the plan that survives if it doesn't hold.</div>
+        <div class="item-link"><a href="https://stratechery.com/2026/the-capex-train-keeps-rolling/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
     </section>
 
@@ -379,32 +379,32 @@
       <div class="item must-read">
         <div class="must-read-tag">Must read</div>
         <div class="item-title">
-          <a href="https://openai.com/index/ai-native-company-workflows/" target="_blank" rel="noopener">How AI-native companies turn workflows into operating capability</a>
+          <a href="https://openai.com/index/how-enterprises-put-ai-to-work/" target="_blank" rel="noopener">From assistance to execution: How enterprises put AI to work</a>
         </div>
-        <div class="item-meta">OpenAI &middot; September 1, 2026</div>
+        <div class="item-meta">OpenAI &middot; August 12, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Three concrete workflows, and one of them is directly copyable this week: a GTM engineer at Clay gave every account a persistent workspace and a dedicated subagent that reviews primary sources overnight, then a coordinating agent turns all of it into a short list of priority moves each morning &mdash; saving about an hour of nightly triage, with evidence kept next to each recommendation so she can inspect sources before acting. Basis turned onboarding into a reusable skill by demonstrating it once and defining a trigger, known steps, tools and a clear definition of &ldquo;done&rdquo;; HR updates the skill when exceptions appear. The framing to adopt is their six-step design brief, especially &ldquo;write the agent&rsquo;s job description&rdquo; &mdash; trigger, outcome, context, tools, permissions, required evidence, and where it must stop for human review. Also worth knowing for context: OpenAI&rsquo;s Enterprise Signals shows top-decile firms now generating 8.3&times; the output tokens per user of typical firms, up from 2.6&times; in January.</div>
-        <div class="item-link"><a href="https://openai.com/index/ai-native-company-workflows/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Two studies across 10M+ enterprise messages, and the numbers reframe what &ldquo;AI adoption&rdquo; means. Frontier firms (top 10% of usage) now generate <strong>8.3&times;</strong> the output tokens per active user of typical firms, up from 2.6&times; in January &mdash; and the gap tracks not with access to models but with adoption of the capabilities that connect agents to company context, tools and repeatable workflows. Concretely: 21% of weekly actives at frontier firms use Plugins and 19% use skills, versus 9% and 3% at typical firms; agentic use is spreading fastest <em>outside</em> engineering, with weekly Codex users up 108&times; in legal, 41&times; in sales, 41&times; in recruiting and 26&times; in marketing since February, against 5&times; in engineering. The finding most PMs will get wrong: usage is highest among <em>early-career</em> employees, not executives &mdash; six months post-adoption they sent 13 more messages per week than execs, which inverts the usual survey story. The framing to adopt: your leverage gap isn't a model gap, it's a workflow-packaging gap. This week, take one thing you do repeatedly and turn it into a shared skill with context and tools attached, rather than a prompt you retype.</div>
+        <div class="item-link"><a href="https://openai.com/index/how-enterprises-put-ai-to-work/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <a href="https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/" target="_blank" rel="noopener">Conceptual integrity and counting lines of code</a>
+          <a href="https://simonwillison.net/2026/Aug/22/more-than-just-code-review/" target="_blank" rel="noopener">More than just code review</a>
         </div>
-        <div class="item-meta">Simon Willison &middot; August 19, 2026</div>
+        <div class="item-meta">Simon Willison &middot; August 22, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Willison&rsquo;s honest accounting of agent productivity: yes, agents let you produce a thousand lines of debugged code, and that is a real improvement &mdash; but only while quality holds, and holding it takes a large amount of skill, knowledge and experience. Volume is the easy part; conceptual integrity is the part that doesn&rsquo;t come free. The mental model shift for PMs is to stop treating throughput as the metric that proves AI adoption is working. Output volume mostly shows that people are asking AI to do more, which is not the same as the work being better. For any PM reporting on an AI initiative, pair every throughput number with a quality or coherence measure, or you&rsquo;ll end up defending a chart that means nothing.</div>
-        <div class="item-link"><a href="https://simonwillison.net/2026/Aug/19/conceptual-integrity-and-counting-lines-of-code/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Willison names the actual bottleneck skill for working with agents: confidently instructing them how to make a change, then confidently verifying the change landed correctly. His caveat is the useful part &mdash; sometimes that means reading every line, but eyeballing every line was never the most effective way to validate a change anyway, so the real work is choosing a verification method proportional to the risk. Apply this principle beyond code: every agent workflow you hand off needs a paired verification step you actually trust, and if you can't name how you'd check the output, you're not ready to delegate the task. That instruct-and-verify loop is the transferable competence, and it's the one worth practising deliberately.</div>
+        <div class="item-link"><a href="https://simonwillison.net/2026/Aug/22/more-than-just-code-review/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <a href="https://www.lennysnewsletter.com/p/how-top-pms-increase-their-leverage" target="_blank" rel="noopener">How top PMs increase their leverage with AI</a>
+          <a href="https://openai.com/index/how-agents-are-transforming-work/" target="_blank" rel="noopener">How agents are transforming work</a>
         </div>
-        <div class="item-meta">Lenny&rsquo;s Newsletter (Colin Matthews) &middot; June 30, 2026</div>
+        <div class="item-meta">OpenAI &middot; June 25, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Matthews lays out how the most AI-native PMs are actually operating in mid-2026, and the four behaviors are specific enough to audit yourself against: prototyping with real code rather than clickable mockups, querying data conversationally via MCP instead of queuing analyst requests, running coding agents with confidence, and hunting continuously for new places to add leverage. Read it as a capability checklist rather than inspiration &mdash; the gap between PMs who do these four things and PMs who don&rsquo;t is becoming the clearest dividing line in the role. If the MCP-backed data querying is the one you haven&rsquo;t built yet, that&rsquo;s the highest-return place to start, because it removes a dependency rather than just speeding up a task you already own.</div>
-        <div class="item-link"><a href="https://www.lennysnewsletter.com/p/how-top-pms-increase-their-leverage" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">The companion piece to the enterprise research above, this one looks inside OpenAI itself at how employees actually use advanced agent capabilities &mdash; a useful benchmark given that weekly Plugin usage there runs at 95% of active users versus 21% at the frontier firms they measure externally. Read it as a ceiling-setter rather than a target: it shows what saturation of these capabilities looks like inside an organization that has no adoption friction. For any PM building an internal AI enablement case, the practical use is comparative &mdash; you now have a credible high-water mark to argue against, and the gap between your team's Plugin/skill usage and that number is a more honest adoption metric than seat count.</div>
+        <div class="item-link"><a href="https://openai.com/index/how-agents-are-transforming-work/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
     </section>
   </div>

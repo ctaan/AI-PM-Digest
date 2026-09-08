@@ -1,8 +1,8 @@
 <!DOCTYPE html><script type="application/json" id="cowork-artifact-meta">
 {
-  "name": "AI+PM Digest — September 7, 2026",
+  "name": "AI+PM Digest — September 8, 2026",
   "schemaVersion": 1,
-  "description": "Caroline's AI + PM digest for September 7, 2026 — frontier AI moves, PM thought leadership, and applied workflows. Archived edition; live version at https://ctaan.github.io/AI-PM-Digest/."
+  "description": "Caroline's AI + PM digest for September 8, 2026 — frontier AI moves, PM thought leadership, and applied workflows. Archived edition; live version at https://ctaan.github.io/AI-PM-Digest/."
 }
 </script>
 <html lang="en">
@@ -308,67 +308,67 @@
 
       <div class="item">
         <div class="item-title">
-          <a href="https://techcrunch.com/2026/09/03/openai-launches-astra-its-powerful-and-controversial-new-model/" target="_blank" rel="noopener">OpenAI launches Astra, its powerful (and controversial) new model</a>
+          <a href="https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/" target="_blank" rel="noopener">Introducing GPT-6 Astra for developers</a>
         </div>
-        <div class="item-meta">TechCrunch (Lucas Ropek) &middot; September 3, 2026</div>
+        <div class="item-meta">Simon Willison &middot; September 5, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Astra shipped Thursday &mdash; first to Daybreak cybersecurity customers, then across Pro, Plus, Enterprise, Business and the API within a week. Skip the benchmark claims and sit with the controversy: Astra uses a reasoning technique called <em>opaque recurrence</em> that obscures chain-of-thought, the very mechanism researchers use to audit why a model decided what it decided. Chief scientist Jakub Pachocki's defense is the sentence to internalize &mdash; &ldquo;as model capabilities are increasing, monitorability is getting more challenging,&rdquo; because more capable models do harder tasks using fewer language tokens, or none. The mental model shift for PMs: <strong>explainability and capability are now actively trading off against each other</strong>, and that trade is being made upstream of you by your model vendor. For any PM whose product needs to show a user or an auditor <em>why</em> the system did something, stop treating traceability as a given and start treating it as a procurement requirement you have to ask about by name.</div>
-        <div class="item-link"><a href="https://techcrunch.com/2026/09/03/openai-launches-astra-its-powerful-and-controversial-new-model/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Skip the benchmark table and read the two API primitives, because they change the interaction model rather than the capability ceiling. <strong>Mid-turn steering</strong> lets you send additional instructions over WebSockets while a response is still generating, so the model absorbs a correction or a changed requirement without restarting; <strong>async tool calling</strong> lets the model keep working while your app runs a function and returns results whenever they land. Both exist because long-running agentic work broke the request/response shape everything was built around. The mental model shift for PMs: the unit of AI interaction is moving from &ldquo;a prompt and an answer&rdquo; to &ldquo;a session you can interrupt,&rdquo; which means the UX patterns you have shipped &mdash; spinner, wait, regenerate &mdash; are about to look as dated as page reloads. For any PM specifying an AI feature this quarter, ask your engineers whether steering is available to you, because it turns &ldquo;the model misunderstood&rdquo; from a failed generation into a live conversation.</div>
+        <div class="item-link"><a href="https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <a href="https://www.anthropic.com/news/claude-text-watermark" target="_blank" rel="noopener">How Claude's text watermark works</a>
+          <a href="https://techcrunch.com/2026/08/24/openai-is-building-an-ai-agent-for-everything-will-everyone-use-them/" target="_blank" rel="noopener">OpenAI is building AI agents for everything. Will everyone use them?</a>
         </div>
-        <div class="item-meta">Anthropic &middot; August 14, 2026 (updated September 1, 2026)</div>
+        <div class="item-meta">TechCrunch &middot; August 24, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Claude now watermarks generated text to comply with the EU AI Act, and the mechanism is elegant: rather than adding hidden characters, it changes the <em>source of randomness</em> used when the model picks between two equally good words, leaving a pattern detectable only with a key. No extra tokens, no price change, no quality impact, no identifying information. The details that matter operationally are the limits &mdash; watermarking is sparse on factual passages and code where only one answer is correct, it barely registers when Claude has only lightly edited human text, and it fails on short samples. The framing PMs should adopt: this is a compliance requirement being satisfied at the <em>sampling layer</em> rather than the policy layer, and Anthropic is applying it globally because they &ldquo;don't yet have a durable way to scope it by region.&rdquo; Apply that lesson to your own roadmap &mdash; regional regulation you can't geo-fence quietly becomes a global product decision, so budget for it as one.</div>
-        <div class="item-link"><a href="https://www.anthropic.com/news/claude-text-watermark" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">The useful question in this piece is not whether the agents work but whether anyone adopts them, and that gap is the most under-modelled risk in AI roadmaps right now. OpenAI is shipping agent surfaces across consumer, workspace and enterprise faster than most organisations can absorb a single one, which produces the familiar pattern of capability outrunning behaviour change. The framing PMs should adopt: for agentic features, distribution and default placement are doing more work than model quality, and your adoption curve is governed by how much trust a user must extend before the first useful outcome. Apply this to your own agent bets &mdash; instrument the moment a user first delegates something consequential, not the moment they open the feature, because that delegation event is the real activation metric.</div>
+        <div class="item-link"><a href="https://techcrunch.com/2026/08/24/openai-is-building-an-ai-agent-for-everything-will-everyone-use-them/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <a href="https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/" target="_blank" rel="noopener">Anthropic is turning Claude Code's auto mode on by default</a>
+          <a href="https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/" target="_blank" rel="noopener">The latest AI news we announced in August 2026</a>
         </div>
-        <div class="item-meta">TechCrunch (Anthony Ha) &middot; August 9, 2026</div>
+        <div class="item-meta">Google &middot; August 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">The headline is a default flip, but the data underneath it is the most useful thing you'll read this week about human-in-the-loop design. In a study with 1,053 paid testers, auto mode caught <strong>89% of harmful actions while human review caught 13.6%</strong> &mdash; and Anthropic's own explanation for the gap is that &ldquo;manual review can become habitual: users approve 97% of permission prompts in Claude Code.&rdquo; That is a confirmation prompt functioning as theatre rather than control. Internalize this and audit your own product: every &ldquo;Are you sure?&rdquo; modal you've shipped is probably being clicked through at a similar rate, which means it provides the <em>appearance</em> of oversight while providing almost none of the substance. The design principle to carry forward &mdash; reserve interruption for the genuinely irreversible (Anthropic's bar is &ldquo;irreversible, destructive, or aimed outside your environment&rdquo;) and let automated screening handle the rest, because attention spent on routine approvals is attention unavailable for the decisions that matter.</div>
-        <div class="item-link"><a href="https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Google's monthly roundup is the cheapest way to keep a competitive picture current without reading every launch post, and reading it as a <em>batch</em> is the point &mdash; a month of announcements viewed together reveals a direction of travel that any single one hides. For a PM, the habit worth building is a standing 15 minutes at month end to read each major lab's roundup back to back and write down one sentence on what each is converging toward. That comparison is where genuine strategic understanding comes from; individual launch posts only ever tell you what one vendor wants you to notice. Internalize the discipline rather than the contents: platform direction is a monthly signal, not a daily one, and treating it that way protects your attention for the daily work that actually ships.</div>
+        <div class="item-link"><a href="https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
     </section>
 
     <section>
       <h2>PM Thought Leaders</h2>
 
-      <div class="item">
-        <div class="item-title">
-          <a href="https://www.mindtheproduct.com/anthropic-fable-5-sage-continues-with-noam-shazeer-joins-open-ai-your-weekly-product-briefing/" target="_blank" rel="noopener">Anthropic Fable 5 saga continues, while Noam Shazeer joins OpenAI: your weekly product briefing</a>
-        </div>
-        <div class="item-meta">Mind the Product / Now Shipping (Mike Belsito) &middot; June 26, 2026</div>
-        <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Belsito's framing of three stories is more valuable than the stories themselves, because each is reframed as a <em>product</em> question rather than a news item. SpaceX acquiring Cursor is treated not as a finance story but as the collapse of model neutrality &mdash; what happens to developers building inside someone else's platform when that platform picks a side. Shazeer's move to OpenAI is read as a signal that fundamental capability gains may still lie ahead, which is a different planning assumption than &ldquo;the models have plateaued.&rdquo; And the Fable 5 export-control timeline becomes a question about building on promises that depend on a third party keeping theirs. That last one is the transferable principle for any PM with a critical vendor dependency: your roadmap inherits your suppliers' political and regulatory risk whether or not you've modelled it. Worth building the habit of reading platform news this way &mdash; ask what commitment of yours to a customer now rests on someone else's commitment to you.</div>
-        <div class="item-link"><a href="https://www.mindtheproduct.com/anthropic-fable-5-sage-continues-with-noam-shazeer-joins-open-ai-your-weekly-product-briefing/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
-      </div>
-
       <div class="item must-read">
         <div class="must-read-tag">Must read</div>
         <div class="item-title">
-          <a href="https://stratechery.com/2026/an-interview-with-figma-ceo-dylan-field-about-design-and-ai/" target="_blank" rel="noopener">An Interview with Figma CEO Dylan Field About Design and AI</a>
+          <a href="https://every.to/chain-of-thought/how-gpt-5-6-changes-knowledge-work" target="_blank" rel="noopener">How GPT-5.6 Changes Knowledge Work</a>
         </div>
-        <div class="item-meta">Stratechery (Ben Thompson) &middot; June 25, 2026</div>
+        <div class="item-meta">Every (Chain of Thought) &middot; August 5, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">This is the sharpest available case study in a narrative diverging from a product reality, and the stakes are unusually legible: Figma IPO'd in 2025, peaked at a <strong>$56.3 billion valuation, and has since fallen to under $10 billion</strong> &mdash; less than half what Adobe once offered &mdash; driven largely by a market story that the company is an &ldquo;AI loser.&rdquo; Field's counter-argument is that AI is a tailwind, not a headwind, and that Figma's Canvas is the natural intersection of design and AI. Whether or not he's right, the reason to read this closely is that Figma's original moat came from a <em>technical</em> breakthrough &mdash; WebGL in the browser &mdash; which then became a <em>collaboration</em> advantage, what Thompson calls the operating system of design. That's the pattern to internalize: the capability you build on and the advantage you end up defending are usually not the same thing, and a market can reprice you on a story about the first while ignoring the second. The career implication for a senior PM is direct &mdash; being able to articulate why the prevailing narrative about your product category is wrong, with specifics, is now core strategic work, not comms work.</div>
-        <div class="item-link"><a href="https://stratechery.com/2026/an-interview-with-figma-ceo-dylan-field-about-design-and-ai/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">The central argument is a genuine reframe of how to use these tools: instead of completing one task at a time, you build a system that <strong>scans the available information, turns it into proposed decisions, and carries out the ones you approve</strong>. The claim is that GPT&#8209;5.6 Sol is the first model that makes this continuous loop practical &mdash; it can scan your sources, identify what is relevant, execute approved work, and build custom tools for itself along the way. Sit with what that does to your job: if the model proposes and you approve, your leverage moves almost entirely into <em>judgment on proposals</em> and away from producing artifacts. The career implication for a senior PM is direct &mdash; the skill compounding fastest is defining what &ldquo;relevant&rdquo; and &ldquo;good&rdquo; mean precisely enough that a system can pre-filter for you. This week, take the one recurring input stream you triage manually and specify, in writing, the decision rule you apply to it.</div>
+        <div class="item-link"><a href="https://every.to/chain-of-thought/how-gpt-5-6-changes-knowledge-work" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item">
         <div class="item-title">
-          <a href="https://stratechery.com/2026/my-vibe-coding-adventure-the-app-and-the-experience-ten-takeaways/" target="_blank" rel="noopener">My Vibe Coding Adventure, The App and the Experience, Ten Takeaways</a>
+          <a href="https://stratechery.com/2026/an-interview-with-openai-president-greg-brockman-about-astra-and-alignment/" target="_blank" rel="noopener">An Interview with OpenAI President Greg Brockman About Astra and Alignment</a>
         </div>
-        <div class="item-meta">Stratechery (Ben Thompson) &middot; June 24, 2026</div>
+        <div class="item-meta">Stratechery (Ben Thompson) &middot; September 4, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Thompson's own account of vibe coding an app &mdash; specifically, as he frames it, one he plans on <em>actually using regularly</em>, which is the detail that makes it worth your time. Most write-ups of this genre stop at the demo, where the hard parts never surface; committing to be a daily user of your own output forces the reflections that only show up after the novelty wears off. For a PM building AI fluency, the highest-value move here is to copy the constraint rather than just read the takeaways: build one small thing you are obligated to use every day for a month. That single condition surfaces the gap between &ldquo;the model produced something plausible&rdquo; and &ldquo;this holds up under real use&rdquo; &mdash; which is precisely the judgment your engineers exercise constantly and that you can otherwise only discuss secondhand.</div>
-        <div class="item-link"><a href="https://stratechery.com/2026/my-vibe-coding-adventure-the-app-and-the-experience-ten-takeaways/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Recorded before the Astra announcement, this covers Brockman's route through Stripe into OpenAI's early years, the ChatGPT launch and the 2023 drama, alignment, and whether OpenAI took security seriously before the Hugging Face incident. The most transferable thread for a PM is Thompson's question about <em>position on the value chain</em> &mdash; OpenAI is squeezed between companies closer to the consumer, like Microsoft, and suppliers with pricing power, like Nvidia, and Thompson even presses on whether having a billion users is an <em>advantage or a liability</em>. That inversion is worth borrowing. The framing PMs should adopt: scale creates obligations as well as leverage, and a large installed base constrains what you can change, deprecate, or reprice. Ask it about your own product &mdash; which of your commitments to existing users is now the thing preventing the strategy you would otherwise choose?</div>
+        <div class="item-link"><a href="https://stratechery.com/2026/an-interview-with-openai-president-greg-brockman-about-astra-and-alignment/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <a href="https://stratechery.com/2026/stripe-acquiring-openrouter-aggregating-ai-flipping-the-business-model/" target="_blank" rel="noopener">Stripe Acquiring OpenRouter, Aggregating AI?, Flipping the Business Model</a>
+        </div>
+        <div class="item-meta">Stratechery (Ben Thompson) &middot; August 17, 2026</div>
+        <div class="item-takeaway-label">Key takeaway</div>
+        <div class="item-takeaway">Thompson reads Stripe's reported acquisition of OpenRouter as &ldquo;an implicit bet on a future market of models and the chance at Aggregation&rdquo; &mdash; which is a bet that models become interchangeable enough that the router, not the model, captures the customer relationship. That is the single most consequential open question for anyone building on top of an LLM, and it has a direct planning consequence: if you believe models commoditize, you invest in switching-cost-free abstraction layers and evaluation harnesses; if you believe one model stays meaningfully better, you integrate deeply and accept lock-in. The mental model shift is recognizing you have already made this bet implicitly in your architecture. Apply this principle by making it explicit &mdash; write down which assumption your current stack encodes, and what evidence would change your mind.</div>
+        <div class="item-link"><a href="https://stratechery.com/2026/stripe-acquiring-openrouter-aggregating-ai-flipping-the-business-model/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
     </section>
 
@@ -378,33 +378,33 @@
       <div class="item must-read">
         <div class="must-read-tag">Must read</div>
         <div class="item-title">
-          <a href="https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/" target="_blank" rel="noopener">Research acceleration: The view inside OpenAI</a>
+          <a href="https://stratechery.com/2026/write-things-down/" target="_blank" rel="noopener">Write Things Down</a>
         </div>
-        <div class="item-meta">Simon Willison &middot; September 6, 2026</div>
+        <div class="item-meta">Stratechery (Ben Thompson) &middot; September 8, 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">One chart here is worth more than most quarterly strategy decks: daily coding-agent spend per OpenAI researcher sat near zero through February 2026, reached roughly $50 by April and $150 by June, plateaued through July, then <strong>climbed steeply to about $600 per researcher per day by late August</strong>. Willison's guess at the cause is that late July is when internal staff got access to the model later released as GPT&#8209;6 Astra. Two things to take from this. First, the org furthest inside the technology is spending at a level most companies haven't begun to budget for, and the step-change came from a capability jump rather than gradual adoption &mdash; so plan for your own tooling costs to move in discontinuous jumps tied to model releases, not smooth curves. Second, note the framing OpenAI is now using internally: the piece and Jakub Pachocki's companion essay both discuss RSI &mdash; recursive self-improvement &mdash; without bothering to expand the acronym. When a lab stops defining its own terms, the concept has become load-bearing internally. For any PM tracking where this is heading, that shift in vocabulary is a leading indicator worth watching more closely than benchmark scores.</div>
-        <div class="item-link"><a href="https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <a href="https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/" target="_blank" rel="noopener">TIL: Using Blender with coding agents on macOS</a>
-        </div>
-        <div class="item-meta">Simon Willison &middot; September 5, 2026</div>
-        <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">The specific achievement is niche &mdash; frontier models have got &ldquo;really good&rdquo; at driving Blender, producing editable <code>.blend</code> files and even rendering movies by generating image sequences and stitching them with <code>ffmpeg</code>. The transferable part is the method: Willison notes that Codex makes it easy to create skills <em>using its own built-in skill-creating skill</em>, and that's how the Blender skill came about. Read that as a general pattern for extending an agent into any tool you already know how to operate manually &mdash; you don't write an integration, you demonstrate the workflow and let the agent package it. Apply this principle to the unglamorous tools in your own stack: the analytics console, the ticketing system, the reporting export you rebuild by hand every month. If you can do it once while narrating, you can probably turn it into a reusable skill, and the ceiling on what agents can operate is now closer to &ldquo;what you can explain&rdquo; than &ldquo;what has an API.&rdquo;</div>
-        <div class="item-link"><a href="https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">Thompson's thesis is that writing things down is powerful for humans <em>and</em> for AI, but that what comes first is deciding what to write, why, and actually getting things done &mdash; and he works through it via an agent he built to track his own tasks and projects, including the workflows and status boards behind it. This is the most directly copyable thing in today's digest, because the bottleneck he identifies is not the model, it is the absence of a written record for the agent to act on. Internalize the ordering: capture discipline is the prerequisite for delegation, and an agent pointed at an empty or implicit context produces confident noise. The concrete move this week &mdash; pick one area you currently hold in your head (open decisions, blocked items, who owes you what), commit it to a plain text file, and point an agent at it. The file is the product; the agent is just what reads it.</div>
+        <div class="item-link"><a href="https://stratechery.com/2026/write-things-down/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
 
       <div class="item must-read">
         <div class="must-read-tag">Must read</div>
         <div class="item-title">
-          <a href="https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/" target="_blank" rel="noopener">Understanding ChatGPT Work</a>
+          <a href="https://openai.com/index/ai-native-company-workflows/" target="_blank" rel="noopener">How AI-native companies turn workflows into operating capability</a>
         </div>
-        <div class="item-meta">Simon Willison &middot; August 30, 2026</div>
+        <div class="item-meta">OpenAI &middot; Early September 2026</div>
         <div class="item-takeaway-label">Key takeaway</div>
-        <div class="item-takeaway">Willison catalogues the skills shipping inside ChatGPT Work, and the list itself is a roadmap for what knowledge work is being decomposed into: <code>documents</code> for creating .docx files, <code>imagegen</code> with guidance on the image tool, <code>pdf</code> for both reading and rendering, <code>Spreadsheets</code> for .xlsx/.xls/.csv/.tsv, <code>sites:sites-building</code> for building ChatGPT Sites, <code>openai-docs</code> for answering questions about itself, and <code>data-analytics:build-dashboard</code> for dashboards. Two things worth acting on. First, the shape: these are narrow, named, composable capabilities with explicit triggers &mdash; not one general assistant &mdash; which is the architecture pattern to copy when you scope agent work in your own product. Second, note that a vendor now ships a skill whose job is answering questions about the product itself; self-documentation has become a first-class feature rather than a docs-site afterthought. This week's concrete move: pick the recurring deliverable you produce most often, find which of these primitives it decomposes into, and build the workflow from those pieces rather than prompting from scratch each time.</div>
-        <div class="item-link"><a href="https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+        <div class="item-takeaway">The headline number is a widening gap, not a level: frontier firms &mdash; the top 10% of AI usage &mdash; now generate <strong>8.3&times; as many output tokens per active user as typical firms, up from 2.6&times; in January</strong>. What separates them is not better prompts but three structural things: connecting agents to company context and tools, delegating more substantive work, and making successful workflows easy to repeat. The selection criterion they offer is the most useful line here &mdash; start with an end-to-end workflow where a strategic priority, systems, handoffs, controls and measurable stakes all meet, and that repeats often enough to learn from while mattering enough to justify redesign. Apply that test literally: most PMs pick an AI pilot that is either too trivial to matter or too rare to learn from. Score your candidate workflows against those five conditions before committing a quarter to one.</div>
+        <div class="item-link"><a href="https://openai.com/index/ai-native-company-workflows/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">
+          <a href="https://openai.com/index/introducing-openai-presence/" target="_blank" rel="noopener">Introducing OpenAI Presence</a>
+        </div>
+        <div class="item-meta">OpenAI &middot; July 22, 2026</div>
+        <div class="item-takeaway-label">Key takeaway</div>
+        <div class="item-takeaway">Presence is aimed at enterprises deploying trusted agents that answer questions, resolve issues, use company systems, take approved actions, and <em>escalate to people</em> when needed &mdash; and that last clause is the whole product. Note the sequence: acting inside real systems is listed alongside escalation, which means the interesting design surface is the boundary between what the agent does alone and what it hands back. For any PM working on customer-facing automation, that boundary is your core spec, and it is usually the least documented part of the plan. The framing to adopt: an agent's quality is judged as much by the crispness of its escalation rules as by its success rate, because a confident wrong action costs more trust than a clean handoff costs efficiency. Write your escalation triggers before your happy path.</div>
+        <div class="item-link"><a href="https://openai.com/index/introducing-openai-presence/" target="_blank" rel="noopener">Read the full piece &rarr;</a></div>
       </div>
     </section>
   </div>
